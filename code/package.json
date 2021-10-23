@@ -1,0 +1,24 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.2.4",
+    "jest": "^27.2.5",
+    "power-assert": "^1.6.1"
+  },
+  "dependencies": {
+    "axios": "^0.22.0"
+  }
+}
