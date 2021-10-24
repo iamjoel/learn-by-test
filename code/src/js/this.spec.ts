@@ -69,7 +69,7 @@ describe('this', function () {
     expect(obj2.getName.apply(obj1)).toBe('Joel')
   })
 
-  test('apply, call 能改变 bind 过的函数的 this 的指向', () => {
+  test('apply, call 不能改变 bind 过的函数的 this 的指向', () => {
     const obj1 = {
       name: 'Joel',
       getName: function() {
@@ -81,7 +81,7 @@ describe('this', function () {
     }
     obj2.getName = obj1.getName.bind(obj1)
     expect(obj2.getName()).toBe('Joel')
-    expect(obj2.getName.call(obj2)).toBe('Jack')
+    expect(obj2.getName.call(obj2)).toBe('Joel')
   })
 
   test('箭头函数，this 是最近一层非箭头函数的this', () => {
