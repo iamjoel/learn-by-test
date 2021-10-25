@@ -1,4 +1,5 @@
 # 通过写测试用例来学习
+[![learn by test](https://circleci.com/gh/iamjoel/learn-by-test.svg?style=svg)](https://circleci.com/gh/iamjoel/learn-by-test)
 ## JavaScript
 * 数据类型
   * [数组](code/src/js/data-type/array.spec.ts)
