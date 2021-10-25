@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+.ly {
+  display: flex;
+}
+.item {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.flex-grow-item {
+  flex-grow: 1;
+}
