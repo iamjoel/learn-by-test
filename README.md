@@ -3,7 +3,7 @@
 ## JavaScript
 * 数据类型
   * [数组](code/src/js/data-type/array.spec.ts)
-* [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/index.e2e.spec.ts)
+* [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
 
 ## CSS
 * [Flex 布局](code/src/css/flex/index.spec.ts)
