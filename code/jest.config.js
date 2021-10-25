@@ -1,9 +1,18 @@
 const type = process.env.TYPE
 let testMatch
-if(type === 'e2e') {
-  testMatch = ['**/?(*.)+(e2e.)(spec|test).ts']
-} else {
-  testMatch = ['**/?(*.)+(spec|test).ts', '!**/?(*.)+(e2e.)(spec|test).ts']
+
+switch(type) {
+  case 'unit': 
+    testMatch = ['**/?(*.)+(spec|test).ts', '!**/?(*.)+(e2e.)(spec|test).ts']
+    break
+  // 还有些问题
+  case 'e2e': 
+    testMatch = ['**/?(*.)+(e2e.)(spec|test).ts']
+    break
+  case 'all':
+  default:
+    testMatch = ['**/?(*.)+(spec|test).ts']
+    break
 }
 
 const config = {

@@ -1,31 +1,19 @@
-import Server from 'static-server'
-import puppeteer, { Browser, Page } from 'puppeteer';
+import serverAndBrowser, {Page, StopFn} from '../../utils/e2e-setup'
 describe('Flex 布局', () => {
-  let server:any;
-  let browser: Browser;
-  let page: Page;
-  beforeAll(() => {
-    return new Promise<void>(resolve => {
-      server = new Server({
-        rootPath: `${__dirname}/code`,
-        host: '127.0.0.1',
-        port: 3001,
-      })
+  let stop: StopFn
+  let page: Page
 
-      server.start(async () => {
-        browser = await puppeteer.launch()
-        page = await browser.newPage()
-        await page.goto('http://localhost:3001', {
-          waitUntil: 'networkidle2',
-        })
-        resolve()
-      })
+  beforeAll(async () => {
+    const res = await serverAndBrowser({
+      rootPath: `${__dirname}/code`,
+      port: 3000
     })
-  }, 10 * 1000)
+    stop = res.stop
+    page = res.page
+  })
 
   afterAll(async () => {
-      await browser.close()
-      server.stop()
+      await stop()
   })
 
   test('主轴是行方向的在一列',async () => {

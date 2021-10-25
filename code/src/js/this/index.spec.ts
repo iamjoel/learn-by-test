@@ -2,18 +2,6 @@
  * @jest-environment jsdom
  */
 describe('this', function () {
-  // TODO: jsdom 中，顶层的 this 是 undefined 。也没法执行 document 中的js。
-  // test('全局上下文中的 this 是 顶层对象(浏览器中是window)', function() {
-  //   expect(this).toEqual(window)
-  // })
-
-  // test('全局函数中的的 this 是 顶层对象(浏览器中是window)', function() {
-  //   function getThis () {
-  //     return this
-  //   }
-  //   expect(getThis()).toEqual(window)
-  // })
-
   test('做为对象上的方法被调用，方法中的 this 是调用者对象',() => {
     const obj1 = {
       name: 'Joel',

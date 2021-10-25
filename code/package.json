@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "TYPE=all jest",
+    "test:unit": "TYPE=unit jest",
     "test:e2e": "TYPE=e2e jest",
     "coverage": "jest --coverage"
   },

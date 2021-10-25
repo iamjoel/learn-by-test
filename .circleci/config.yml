@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run: cd ./code && yarn config set ignore-engines true && yarn install
-      - run: cd ./code && yarn test
+      - run: cd ./code && yarn test:unit
 
 # Orchestrate our job run sequence
 workflows:
