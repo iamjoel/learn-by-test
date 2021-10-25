@@ -6,5 +6,5 @@
 * [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
 
 ## CSS
-* [Flex 布局](code/src/css/flex/index.spec.ts)
+* [Flex 布局](code/src/css/flex/index.e2e.spec.ts)
 
