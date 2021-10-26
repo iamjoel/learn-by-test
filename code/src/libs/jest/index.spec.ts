@@ -11,7 +11,7 @@ jest.mock('./utils/get-info', () => {
     ...originalModule,
     default: () => 'abc',
     getYear: () => 2021,
-  };
+  }
 })
 
 describe('Jest', () => {
@@ -78,7 +78,7 @@ describe('Jest', () => {
       }
 
       fetchNameCallback(name => {
-        expect(name).toBe('Joel');
+        expect(name).toBe('Joel')
         done()
       })
     })
@@ -105,11 +105,12 @@ describe('Jest', () => {
       })
     })
 
-    test('Async/Await', async () => {
+    test('Async/Await 类型的异步：正常写', async () => {
       const name = await fetchName()
       expect(name).toBe('Joel')
+
       try {
-        fetchName(true);
+        await fetchName(true)
       } catch(e) {
         expect(e).toMatch('error')
       }
@@ -146,9 +147,9 @@ describe('Jest', () => {
     })
 
     test('Mock 文件的全部或部分内容', () => {
-      expect(getGuid()).toBe('abc');
-      expect(getYear()).toBe(2021);
-      expect(getMonth()).toBe(9);
+      expect(getGuid()).toBe('abc')
+      expect(getYear()).toBe(2021)
+      expect(getMonth()).toBe(9)
     })
   })
 })
