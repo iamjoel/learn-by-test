@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "TYPE=all jest",
-    "test:unit": "TYPE=unit jest",
-    "test:e2e": "TYPE=e2e jest",
-    "coverage": "jest --coverage"
+    "test": "cross-env TYPE=all jest",
+    "test:unit": "cross-env TYPE=unit jest",
+    "test:e2e": "cross-env TYPE=e2e jest",
+    "coverage": "cross-env TYPE=unit jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@types/http-server": "^0.12.1",
     "@types/jest": "^27.0.2",
     "babel-jest": "^27.2.4",
+    "cross-env": "^7.0.3",
     "jest": "^27.2.5"
   },
   "dependencies": {
