@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@types/puppeteer": "^5.4.4",
+    "axios": "^0.24.0",
     "puppeteer": "^10.4.0",
     "static-server": "^2.2.1"
   }
