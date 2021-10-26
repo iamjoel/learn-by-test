@@ -1,4 +1,7 @@
 import serverAndBrowser, {Page, StopFn} from '../../utils/e2e-setup'
+import {addAttach} from 'jest-html-reporters/helper'
+import path from 'path'
+
 describe('Flex 布局', () => {
   let stop: StopFn
   let page: Page
@@ -17,6 +20,9 @@ describe('Flex 布局', () => {
   })
 
   test('主轴是行方向的在一列',async () => {
+      const filePath = path.resolve(__dirname, "./flex.jpg")
+      await page.screenshot({ path: filePath })
+      await addAttach(filePath, "flex pic")
       const posYArr = await page.evaluate(() => {
         const items = document.querySelectorAll('.ly>.item')
         return [
