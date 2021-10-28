@@ -56,6 +56,7 @@ expect(posYArr[1]).toBe(posYArr[2])
   * [if](code/src/js/if.spec.ts)
 * 数据类型
   * [数组](code/src/js/data-type/array.spec.ts)
+  * [正则](code/src/js/data-type/regexp.spec.ts)
 * [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
 
 ### CSS
