@@ -60,6 +60,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
 
 ### CSS
+* [选择器优先级](code/src/css/selector-priority/index.e2e.spec.ts)
 * [Flex 布局](code/src/css/flex/index.e2e.spec.ts)
 
 ## Node.js
