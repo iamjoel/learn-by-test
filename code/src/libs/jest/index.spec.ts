@@ -38,6 +38,7 @@ describe('Jest', () => {
     test('是否被调用', () => {
       const cb = jest.fn()
       cb()
+      expect(cb).toBeCalled()
     })
 
     test('被调用次数', () => {

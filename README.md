@@ -67,5 +67,6 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [path](code/src/node/path.spec.ts)
 
 ### 第三方库
+* [React](code/src/libs/react/Button.spec.tsx)
 * [Lodash](code/src/libs/lodash.spec.ts)
 * [Jest](code/src/libs/jest/index.spec.ts)
