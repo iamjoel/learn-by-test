@@ -28,6 +28,18 @@ describe('Lodash', () => {
     expect(isSame).toEqual(true)
   })
 
+  test('_.curry: 柯里化', () => {
+    const abc = function(a: any, b: any, c: any) {
+      return [a, b, c];
+    }
+    const curried = _.curry(abc)
+
+    expect(curried(1, 2, 3)).toEqual([1, 2, 3])
+    expect(curried(1, 2)(3)).toEqual([1, 2, 3])
+    expect(curried(1)(2)(3)).toEqual([1, 2, 3])
+    expect(curried(1)(_, 3)(2)).toEqual([1, 2, 3])
+  })
+
   describe('_.random: 生成随机数', () => {
     test('随机整数', () => {
       const randomInt = _.random(0, 5)
