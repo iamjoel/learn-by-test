@@ -3,7 +3,7 @@ let testMatch
 
 switch(type) {
   case 'unit':
-    testMatch = ['**/?(*.)+(spec|test).(ts|tsx)', '!**/?(*.)+(e2e.)(spec|test).(ts|tsx)']
+    testMatch = ['**/?(*.)+(spec|test).(ts|tsx)', '!**/?(*.)+(e2e|api).(spec|test).(ts|tsx)']
     break
   case 'e2e': 
     testMatch = ['**/?(*.)+(e2e.)(spec|test).(ts|tsx)']
