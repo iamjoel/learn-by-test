@@ -1,4 +1,7 @@
-import { Controller, Get, Param, Query, Post, Body } from '@nestjs/common';
+import { Controller, Get, Param, Query, Post, Body, UseInterceptors, UploadedFile } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express'
+import { FormDataRequest } from 'nestjs-form-data'
+import { Express } from 'express'
 import { AppService } from './app.service';
 import Pet from './pet.entity'
 
@@ -21,10 +24,19 @@ export class AppController {
     return this.appService.create(body)
   }
 
-  // 文件上传：https://docs.nestjs.com/techniques/file-upload
   // 'multipart/form-data'
-  @Post('/petByFormData')
+  @Post('/pet/byFormData')
+  @FormDataRequest()
   createByFormData(@Body() body: Pet): number {
+    console.log(body)
     return this.appService.create(body)
+  }
+
+  // 文件上传：https://docs.nestjs.com/techniques/file-upload
+  @Post('/pet/upload')
+  @UseInterceptors(FileInterceptor('image'))
+  uploadFile(@UploadedFile() file: Express.Multer.File) {
+    console.log(file);
+    return 'success'
   }
 }
