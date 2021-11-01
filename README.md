@@ -58,6 +58,7 @@ expect(posYArr[1]).toBe(posYArr[2])
   * [数组](code/src/js/data-type/array.spec.ts)
   * [正则](code/src/js/data-type/regexp.spec.ts)
 * [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
+* [DOM](code/src/js/dom/index.ui.spec.ts)
 
 ### CSS
 * [选择器优先级](code/src/css/selector-priority/index.e2e.spec.ts)

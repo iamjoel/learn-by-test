@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+#tar-size {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  overflow: auto;
+  background-color: red;
+  color: #fff;
+}
+
+#tar-pos {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+}
+
+#tar-style {
+  font-size: 20px;
+}
