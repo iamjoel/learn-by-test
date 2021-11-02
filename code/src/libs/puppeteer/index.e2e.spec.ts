@@ -32,6 +32,8 @@ describe('DOM', () => {
     // 单个
     const width2 = await page.$eval('#tar', elem => elem.clientWidth)
     expect(width2).toBe(100)
+    const width3 = await (page.$('#tar') as any).clientWidth
+    expect(width3).toBe(undefined) // 返回的 DOM 只有部分属性。主要用来做 click 之类操作的，而不是获得属性的
 
     // 多个
     const itemLens = await page.$$eval('.item', elems => elems.length)
@@ -50,9 +52,29 @@ describe('DOM', () => {
     expect(selectValue).toBe('joel')
 
     // checkbox 用 click 的方式。
+    const checkboxElem = await page.$('[type=checkbox]')
+    const isChecked = await page.$eval('[type=checkbox]', elem => (elem as HTMLInputElement).checked)
+    expect(isChecked).toBe(false)
+    await checkboxElem.click()
+    const isChecked2 = await page.$eval('[type=checkbox]', elem => (elem as HTMLInputElement).checked)
+    expect(isChecked2).toBe(true)
 
     // radio
+    const radioElem = await page.$('[type=radio]')
+    const isChecked3 = await page.$eval('[type=radio]', elem => (elem as HTMLInputElement).checked)
+    expect(isChecked3).toBe(false)
+    await radioElem.click()
+    const isChecked4 = await page.$eval('[type=radio]', elem => (elem as HTMLInputElement).checked)
+    expect(isChecked4).toBe(true)
   })
-  // page.$()
-  // page.waitForNavigation
+
+  test('等待页面跳转', async () => {
+    setTimeout(async () => {
+      const linkElem = await page.$('#link')
+      linkElem.click()
+    }, 3000)
+    await page.waitForNavigation()
+    const hasElem = await page.$$eval('#abcabc', elems => elems.length === 1)
+    expect(hasElem).toBe(true)
+  })
 })
