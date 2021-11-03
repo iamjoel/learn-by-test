@@ -324,7 +324,7 @@ describe('Array', () => {
   })
 
   test('类数组对象转换成数组: Array.from', () => {
-    function getArgs() {
+    function getArgs(a: number, b: number) {
       return Array.from(arguments)
     }
 

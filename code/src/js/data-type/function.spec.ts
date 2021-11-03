@@ -1,6 +1,6 @@
 describe('函数', () => {
   test('获取函数的所有参数', () => {
-    function getArgs() {
+    function getArgs(a: number, b: number) {
       return Array.from(arguments)
     }
 
