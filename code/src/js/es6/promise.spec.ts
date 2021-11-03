@@ -80,4 +80,36 @@ describe('Promise', () => {
       cb()
     })
   })
+
+  test('所有异步都完成，失败也算：Promise.allSettled', (cb) => {
+    function doSth1():Promise<string> {
+      return new Promise(resolve => {
+        setTimeout(() => resolve('1'), 10)
+      })
+    }
+
+    function doSth2():Promise<string> {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => reject('2'), 10)
+      })
+    }
+
+    function doSth3():Promise<string> {
+      return new Promise(resolve => {
+        setTimeout(() => resolve('3'), 10)
+      })
+    }
+
+    Promise.allSettled([doSth1(), doSth2(), doSth3()]).then(res => {
+      const successes = res
+                          .filter(item => item.status === 'fulfilled')
+                          .map((item: any) => item.value)
+      const failures =  res
+                        .filter(item => item.status === 'rejected')
+                        .map((item: any) => item.reason)                
+      expect(successes).toEqual(['1', '3'])
+      expect(failures).toEqual(['2'])
+      cb()
+    })
+  })
 })
