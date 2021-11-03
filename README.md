@@ -56,6 +56,7 @@ expect(posYArr[1]).toBe(posYArr[2])
   * [if](code/src/js/if.spec.ts)
 * 数据类型: [数字](code/src/js/data-type/number.spec.ts)，[字符串](code/src/js/data-type/string.spec.ts)，[正则](code/src/js/data-type/regexp.spec.ts)，[数组](code/src/js/data-type/array.spec.ts)，[对象](code/src/js/data-type/object.spec.ts)，[函数](code/src/js/data-type/function.spec.ts)，[枚举](code/src/js/data-type/enum.spec.ts)。
 * [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
+* ES6: [Promise](code/src/js/es6/promise.spec.ts)。
 * [DOM](code/src/js/dom/index.e2e.spec.ts)
 
 ### CSS
