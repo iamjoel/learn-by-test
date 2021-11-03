@@ -322,4 +322,12 @@ describe('Array', () => {
       });
     })
   })
+
+  test('类数组对象转换成数组: Array.from', () => {
+    function getArgs() {
+      return Array.from(arguments)
+    }
+
+    expect(getArgs(1, 2)).toEqual([1, 2])
+  })
 })
