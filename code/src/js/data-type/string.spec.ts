@@ -6,6 +6,12 @@ describe('字符串', () => {
     expect(typeof 3 === 'string').toBe(false)
   })
 
+  test('模板字符串', () => {
+    const name = 'Joel'
+    const greetingMsg = `My name is ${name}`
+    expect(greetingMsg).toBe('My name is Joel')
+  })
+
   test('查找', () => {
     expect('abc'.includes('a')).toBe(true)
     expect('abc'.includes('d')).toBe(false)
