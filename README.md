@@ -70,7 +70,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [React](code/src/libs/react/Button.spec.tsx)
 * 基础库工具库: [Lodash](code/src/libs/lodash.spec.ts)，[moment](code/src/libs/moment.spec.ts)。
 * 测试库: [Jest](code/src/libs/jest/index.spec.ts)，[Puppeteer](code/src/libs/puppeteer/index.e2e.spec.ts)。
-* 其他：[任务队列管理库:queue](code/src/libs/other/queue.spec.ts)
+* 其他：[任务队列管理库:queue](code/src/libs/other/queue/index.spec.ts)
 
 ### 其他
 * [接口测试](code/src/api/index.api.spec.ts)

@@ -37,23 +37,23 @@ describe('queue', () => {
     q.start()
   })
 
-  test('并发数: concurrency', cb => {
-    const q = queue({
-      concurrency: 10 // b
-    })
+  // test('并发数: concurrency', cb => {
+  //   const q = queue({
+  //     concurrency: 10 // b
+  //   })
 
-    for(let i = 0; i < 20; i++) {
-      q.push(doThing(i + '', 2000))
-    }
+  //   for(let i = 0; i < 20; i++) {
+  //     q.push(doThing(i + '', 2000))
+  //   }
 
-    q.on('success', (msg) => {
-      console.log(q.length) // 未执行任务长度
-    })
+  //   q.on('success', (msg) => {
+  //     console.log(q.length) // 未执行任务长度
+  //   })
 
-    q.on('end', () => {
-      cb()
-    })
+  //   q.on('end', () => {
+  //     cb()
+  //   })
 
-    q.start()
-  })
+  //   q.start()
+  // })
 })
