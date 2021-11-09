@@ -56,3 +56,6 @@ go test -v ./...
 
 ## 工具
 * [Ginkgo](https://onsi.github.io/ginkgo/) BDD 风格的测试框架。
+
+## 问题
+包含多个 package 不会跑测试。。。一个目录下不能有多个package 吗？

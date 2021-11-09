@@ -1,5 +1,5 @@
 package var_test
-import "testing" // 测试包
+import "testing"
 import (
   . "github.com/onsi/ginkgo"
   . "github.com/onsi/gomega"
