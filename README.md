@@ -75,6 +75,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 ### Node.js
 * [fs](node/src/fs/index.spec.ts)
 * [path](node/src/path.spec.ts)
+* [EventEmitter](node/src/event-emitter.spec.ts)
 
 
 
