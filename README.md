@@ -51,22 +51,19 @@ expect(posYArr[1]).toBe(posYArr[2])
 
 
 ## 内容
-### JavaScript
-* 基础: [if](code/src/js/basic/if.spec.ts)，[循环](code/src/js/basic/loop.spec.ts)。
+### 前端 
+#### JavaScript
+* 基础: [if](frontend/src/js/basic/if.spec.ts)，[循环](code/src/js/basic/loop.spec.ts)。
 * 数据类型: [数字](code/src/js/data-type/number.spec.ts)，[字符串](code/src/js/data-type/string.spec.ts)，[正则](code/src/js/data-type/regexp.spec.ts)，[数组](code/src/js/data-type/array.spec.ts)，[对象](code/src/js/data-type/object.spec.ts)，[函数](code/src/js/data-type/function.spec.ts)，[枚举](code/src/js/data-type/enum.spec.ts)，[Set](code/src/js/data-type/set.spec.ts)。
 * [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
 * ES6+: [Promise](code/src/js/es6/promise.spec.ts)，[async/await](code/src/js/es6/async-await.spec.ts)，[解构赋值](code/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](code/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](code/src/js/es6/optional-chain.spec.ts)。
 * [DOM](code/src/js/dom/index.e2e.spec.ts)
 
-### CSS
+#### CSS
 * [选择器优先级](code/src/css/selector-priority/index.e2e.spec.ts)
 * [Flex 布局](code/src/css/flex/index.e2e.spec.ts)
 
-### Node.js
-* [fs](code/src/node/fs/index.spec.ts)
-* [path](code/src/node/path.spec.ts)
-
-### 第三方库
+#### 第三方库
 * [React](code/src/libs/react/Button.spec.tsx)
 * 基础库工具库: [Lodash](code/src/libs/lodash.spec.ts)，[moment](code/src/libs/moment.spec.ts)。
 * 测试库: [Jest](code/src/libs/jest/index.spec.ts)，[Puppeteer](code/src/libs/puppeteer/index.e2e.spec.ts)。
@@ -74,3 +71,10 @@ expect(posYArr[1]).toBe(posYArr[2])
 
 ### 其他
 * [接口测试](code/src/api/index.api.spec.ts)
+
+### Node.js
+* [fs](node/src/fs/index.spec.ts)
+* [path](node/src/path.spec.ts)
+
+
+

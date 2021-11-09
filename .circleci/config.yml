@@ -7,17 +7,24 @@ orbs:
   node: circleci/node@4.7
 
 jobs:
-  build:
+  frontend:
     docker:
       - image: circleci/node:lts
     steps:
       - checkout
-      - run: cd ./code && yarn config set ignore-engines true && yarn install
-      - run: cd ./code && yarn test:unit
+      - run: cd ./frontend && yarn config set ignore-engines true && yarn install
+      - run: cd ./frontend && yarn test:unit
+  node:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: cd ./node && yarn config set ignore-engines true && yarn install
+      - run: cd ./mpde && yarn test:unit    
 
 # Orchestrate our job run sequence
 workflows:
   test:
     jobs:
-      - build
-        
+      - frontend
+      - node
