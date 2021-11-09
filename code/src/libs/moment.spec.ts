@@ -1,6 +1,15 @@
 import moment from 'moment'
 
 describe('moment', () => {
+  test('创建', () => {
+    const now = new Date()
+    expect(moment().year()).toBe(now.getFullYear())
+    //  ISO 8601 format
+    expect(moment('2021-05-12').year()).toBe(2021)
+    expect(moment('20210512').year()).toBe(2021)
+    // 非 ISO 8601 format
+    expect(moment('2021/05/12', 'YYYY/MM/DD').year()).toBe(2021)
+  })
   test('格式化', () => {
     const date = new Date('2021/5/12')
     expect(moment(date).format('YYYY-MM-DD HH:mm:ss')).toBe('2021-05-12 00:00:00')
@@ -14,7 +23,7 @@ describe('moment', () => {
   })
 
   test('取值&设值', () => {
-    const date = moment('2021/5/12')
+    const date = moment('2021-05-12')
     date.add(1, 'day')
     expect(date.date()).toBe(13)
 
@@ -32,18 +41,18 @@ describe('moment', () => {
     expect(date.date()).toBe(31)
 
     // 闰年
-    expect(moment('2020/1/1').isLeapYear()).toBe(true)
-    expect(moment('1900/1/1').isLeapYear()).toBe(false)
-    expect(moment('2021/1/1').isLeapYear()).toBe(false)
+    expect(moment('2020-01-01').isLeapYear()).toBe(true)
+    expect(moment('1900-01-01').isLeapYear()).toBe(false)
+    expect(moment('2021-01-01').isLeapYear()).toBe(false)
   })
 
   test('比较', () => {
-    expect(moment('2021/5/12').isAfter(moment('2021/3/12'))).toBe(true)
-    expect(moment('2021/5/12').isSameOrAfter(moment('2021/5/12'))).toBe(true)
+    expect(moment('2021-05-12').isAfter(moment('2021-03-12'))).toBe(true)
+    expect(moment('2021-05-12').isSameOrAfter(moment('2021-05-12'))).toBe(true)
 
-    expect(moment('2021/5/12').isBefore(moment('2021/7/12'))).toBe(true)
+    expect(moment('2021-05-12').isBefore(moment('2021-07-12'))).toBe(true)
 
-    expect(moment('2021/5/12').isSame(moment('2021/5/12 03:10:10'))).toBe(false)
-    expect(moment('2021/5/12').isSame(moment('2021/5/12 03:10:10'), 'day')).toBe(true)
+    expect(moment('2021-05-12').isSame(moment('2021-05-12 03:10:10'))).toBe(false)
+    expect(moment('2021-05-12').isSame(moment('2021-05-12 03:10:10'), 'day')).toBe(true)
   })
 })
