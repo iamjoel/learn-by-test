@@ -53,24 +53,24 @@ expect(posYArr[1]).toBe(posYArr[2])
 ## 内容
 ### 前端 
 #### JavaScript
-* 基础: [if](frontend/src/js/basic/if.spec.ts)，[循环](code/src/js/basic/loop.spec.ts)。
-* 数据类型: [数字](code/src/js/data-type/number.spec.ts)，[字符串](code/src/js/data-type/string.spec.ts)，[正则](code/src/js/data-type/regexp.spec.ts)，[数组](code/src/js/data-type/array.spec.ts)，[对象](code/src/js/data-type/object.spec.ts)，[函数](code/src/js/data-type/function.spec.ts)，[枚举](code/src/js/data-type/enum.spec.ts)，[Set](code/src/js/data-type/set.spec.ts)。
-* [this](code/src/js/this/index.spec.ts) 还有 [这里](code/src/js/this/index.e2e.spec.ts)
-* ES6+: [Promise](code/src/js/es6/promise.spec.ts)，[async/await](code/src/js/es6/async-await.spec.ts)，[解构赋值](code/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](code/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](code/src/js/es6/optional-chain.spec.ts)。
-* [DOM](code/src/js/dom/index.e2e.spec.ts)
+* 基础: [if](frontend/src/js/basic/if.spec.ts)，[循环](frontend/src/js/basic/loop.spec.ts)。
+* 数据类型: [数字](frontend/src/js/data-type/number.spec.ts)，[字符串](frontend/src/js/data-type/string.spec.ts)，[正则](frontend/src/js/data-type/regexp.spec.ts)，[数组](frontend/src/js/data-type/array.spec.ts)，[对象](frontend/src/js/data-type/object.spec.ts)，[函数](frontend/src/js/data-type/function.spec.ts)，[枚举](frontend/src/js/data-type/enum.spec.ts)，[Set](frontend/src/js/data-type/set.spec.ts)。
+* [this](frontend/src/js/this/index.spec.ts) 还有 [这里](frontend/src/js/this/index.e2e.spec.ts)
+* ES6+: [Promise](frontend/src/js/es6/promise.spec.ts)，[async/await](frontend/src/js/es6/async-await.spec.ts)，[解构赋值](frontend/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](frontend/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](frontend/src/js/es6/optional-chain.spec.ts)。
+* [DOM](frontend/src/js/dom/index.e2e.spec.ts)
 
 #### CSS
-* [选择器优先级](code/src/css/selector-priority/index.e2e.spec.ts)
-* [Flex 布局](code/src/css/flex/index.e2e.spec.ts)
+* [选择器优先级](frontend/src/css/selector-priority/index.e2e.spec.ts)
+* [Flex 布局](frontend/src/css/flex/index.e2e.spec.ts)
 
 #### 第三方库
-* [React](code/src/libs/react/Button.spec.tsx)
-* 基础库工具库: [Lodash](code/src/libs/lodash.spec.ts)，[moment](code/src/libs/moment.spec.ts)。
-* 测试库: [Jest](code/src/libs/jest/index.spec.ts)，[Puppeteer](code/src/libs/puppeteer/index.e2e.spec.ts)。
-* 其他：[任务队列管理库:queue](code/src/libs/other/queue/index.spec.ts)
+* [React](frontend/src/libs/react/Button.spec.tsx)
+* 基础库工具库: [Lodash](frontend/src/libs/lodash.spec.ts)，[moment](frontend/src/libs/moment.spec.ts)。
+* 测试库: [Jest](frontend/src/libs/jest/index.spec.ts)，[Puppeteer](frontend/src/libs/puppeteer/index.e2e.spec.ts)。
+* 其他：[任务队列管理库:queue](frontend/src/libs/other/queue/index.spec.ts)
 
 ### 其他
-* [接口测试](code/src/api/index.api.spec.ts)
+* [接口测试](frontend/src/api/index.api.spec.ts)
 
 ### Node.js
 * [fs](node/src/fs/index.spec.ts)
