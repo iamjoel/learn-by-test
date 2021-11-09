@@ -20,7 +20,7 @@ jobs:
     steps:
       - checkout
       - run: cd ./node && yarn config set ignore-engines true && yarn install
-      - run: cd ./mpde && yarn test:unit    
+      - run: cd ./node && yarn test:unit    
 
 # Orchestrate our job run sequence
 workflows:
