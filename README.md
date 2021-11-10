@@ -78,7 +78,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [EventEmitter](node/src/event-emitter.spec.ts)
 
 ### Go
-* 基础: [变量](go/src/basic/var_test.go)
+* 基础: [变量](go/src/basic/var/var_test.go)，[导入&导出](go/src/basic/pkg-test/pkg_test.go)。
 
 
 

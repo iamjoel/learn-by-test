@@ -5,8 +5,9 @@
 * GOPATH: 工作空间。保存 Go 项目代码和第三方依赖包。
 
 ## 把依赖装到当前项目目录下
+version >= 1.13 时，使用下面的命令：
 ```
-go env GO111MODULE=on
+go env -w GO111MODULE=on
 ```
 
 查看 是否设置成功
@@ -23,6 +24,11 @@ go get xxx
 或
 ```
 go install xxxx
+```
+
+安装`go.mod`里已有的包：
+```
+go mod download
 ```
 
 
@@ -50,6 +56,15 @@ go 路径/文件名.go
 go test -v ./...
 ```
 
+## 包
+一个目录下，只能有一个包。
+## import 包
+文章: [仓库，模块和包](https://zhuanlan.zhihu.com/p/392958300)
+
+### 内部包
+内部包只可被直接父级包和同级的相邻包使用。通过定义包名为 internal 即可。
+
+
 ## 注意
 1. 有变量没有使用会报错。
 1. 一些代码风格不对也会报错。如 if 的 `{` 在新的一行。
@@ -58,4 +73,3 @@ go test -v ./...
 * [Ginkgo](https://onsi.github.io/ginkgo/) BDD 风格的测试框架。
 
 ## 问题
-包含多个 package 不会跑测试。。。一个目录下不能有多个package 吗？
