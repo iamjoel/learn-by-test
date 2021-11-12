@@ -48,4 +48,30 @@ describe('对象', () => {
       c: 1
     })
   })
+
+  test('冻结对象: freeze', () => {
+    // 冻结对象后：不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值。此外，冻结一个对象后该对象的原型也不能被修改。
+    // 冻结对象能提升大对象，数组的性能
+    const obj = {a: 1, b: {name: 'Joel'}}
+    expect(Object.isFrozen(obj)).toBe(false)
+    Object.freeze(obj)
+    expect(Object.isFrozen(obj)).toBe(true)
+    expect(() => {
+      obj.a = 2
+    }).toThrowError()
+    expect(obj.a).toBe(1)
+
+    // 只冻结对象的第一层
+    obj.b.name = 'Jack'
+    expect(obj.b.name).toBe('Jack')
+    // 没有 API 解冻。
+    
+    // 冻结数组
+    const arr = [1, 2, 3]
+    Object.freeze(arr)
+    expect(() => {
+      arr[0] = 2
+    }).toThrowError()
+    expect(arr[0]).toBe(1)
+  })
 })
