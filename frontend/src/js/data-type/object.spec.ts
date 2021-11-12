@@ -64,7 +64,11 @@ describe('对象', () => {
     // 只冻结对象的第一层
     obj.b.name = 'Jack'
     expect(obj.b.name).toBe('Jack')
-    // 没有 API 解冻。
+
+    // 没有 API 解冻。只能通过拷贝对象。
+    const obj2 = {...obj}
+    expect(Object.isFrozen(obj2)).toBe(false)
+    expect(obj2).toEqual(obj)
     
     // 冻结数组
     const arr = [1, 2, 3]
