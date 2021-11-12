@@ -61,6 +61,10 @@ describe('对象', () => {
     }).toThrowError()
     expect(obj.a).toBe(1)
 
+    // 从可变性范围上说：freeze < seal < extensible
+    expect(Object.isSealed(obj)).toBe(true)
+    expect(Object.isExtensible(obj)).toBe(false)
+
     // 只冻结对象的第一层
     obj.b.name = 'Jack'
     expect(obj.b.name).toBe('Jack')
@@ -77,5 +81,38 @@ describe('对象', () => {
       arr[0] = 2
     }).toThrowError()
     expect(arr[0]).toBe(1)
+  })
+
+  test('密封对象: seal', () => {
+    // 密封后：对象不能新增和删除属性
+    const obj: Record<string, number> = {a: 1, b: 2}
+    expect(Object.isSealed(obj)).toBe(false)
+    Object.seal(obj)
+    expect(Object.isSealed(obj)).toBe(true)
+    obj.a = 2
+    expect(obj.a).toBe(2)
+    expect(() => {
+      obj.c = 3
+    }).toThrowError()
+    expect(() => {
+      delete obj.a
+    }).toThrowError()
+    expect(obj).toEqual({a: 2, b: 2})
+    expect(Object.isExtensible(obj)).toBe(false)
+  })
+
+  test('对象不可扩展: preventExtensions', () => {
+    // 对象不可扩展: 不能增属性，但能删属性
+    const obj: Record<string, number> = {a: 1, b: 2}
+    expect(Object.isExtensible(obj)).toBe(true)
+    Object.preventExtensions(obj)
+    expect(Object.isExtensible(obj)).toBe(false)
+
+    obj.a = 2
+    delete obj.b
+    expect(() => {
+      obj.c = 3
+    }).toThrowError()
+    expect(obj).toEqual({a: 2})
   })
 })
