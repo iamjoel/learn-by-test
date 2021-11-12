@@ -49,6 +49,78 @@ describe('对象', () => {
     })
   })
 
+  test('定义属性: defineProperty & defineProperty', () => {
+    /*
+    * writable, configurable, enumerable 是互相独立的。
+    * writable 能改值
+    * configurable: 能被删除
+    * enumerable 遍历时，能被找到: Object.keys()
+    */
+    const obj: Record<string, any> = {}
+
+    Object.defineProperties(obj, {
+      readOnlyA: {
+        value: 'a'
+      },
+      writeableB: {
+        value: 'b',
+        writable: true
+      },
+      configurableC: {
+        value: 'c',
+        configurable: true
+      },
+      enumerableD: {
+        value: 'd',
+        enumerable: true
+      }
+    })
+
+    // 只读
+    expect(obj.readOnlyA).toBe('a')
+    expect(() => obj.readOnlyA = 'b').toThrowError()
+    expect(() => delete obj.readOnlyA).toThrowError()
+    expect(obj.readOnlyA).toBe('a')
+    expect(obj.propertyIsEnumerable('readOnlyA')).toBe(false) // 无法被枚举到
+    expect(Object.keys(obj).includes('readOnlyA')).toBe(false) // 无法被枚举到
+
+    // 只写
+    expect(obj.writeableB).toBe('b')
+    expect(() => delete obj.writeableB).toThrowError()
+    obj.writeableB = 'b1'
+    expect(obj.writeableB).toBe('b1') // 能改
+    expect(Object.keys(obj).includes('writeableB')).toBe(false) // 无法被枚举到
+
+    // 删除
+    expect(obj.configurableC).toBe('c')
+    expect(() =>  obj.configurableC = 'c1').toThrowError()
+    expect(() => obj.readOnlyA = 'b').toThrowError()
+    expect(obj.configurableC).toBe('c')
+    expect(Object.keys(obj).includes('configurableC')).toBe(false) // 无法被枚举到
+    delete obj.configurableC // 能删
+    expect(obj.configurableC).toBe(undefined)
+
+    // 能被枚举到
+    expect(obj.enumerableD).toBe('d')
+    expect(() => obj.enumerableD = 'b').toThrowError()
+    expect(() => delete obj.enumerableD).toThrowError()
+    expect(obj.enumerableD).toBe('d')
+    expect(Object.keys(obj).includes('enumerableD')).toBe(true) // 能被枚举到
+
+    let dValue = 1
+    Object.defineProperty(obj, 'd', {
+      get() {
+        return dValue + ''
+      },
+      set(newValue: number) {
+        dValue = newValue + 1
+      }
+    })
+    expect(obj.d).toBe('1')
+    obj.d = 3
+    expect(obj.d).toBe('4')
+  })
+
   test('冻结对象: freeze', () => {
     // 冻结对象后：不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值。此外，冻结一个对象后该对象的原型也不能被修改。
     // 冻结对象能提升大对象，数组的性能
