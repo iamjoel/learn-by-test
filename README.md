@@ -59,6 +59,9 @@ expect(posYArr[1]).toBe(posYArr[2])
 * ES6+: [Promise](frontend/src/js/es6/promise.spec.ts)，[async/await](frontend/src/js/es6/async-await.spec.ts)，[解构赋值](frontend/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](frontend/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](frontend/src/js/es6/optional-chain.spec.ts)。
 * [DOM](frontend/src/js/dom/index.e2e.spec.ts)
 
+#### TypeScript
+* [常用写法](frontend/src/ts/common.spec.ts)
+
 #### CSS
 * [选择器优先级](frontend/src/css/selector-priority/index.e2e.spec.ts)
 * [Flex 布局](frontend/src/css/flex/index.e2e.spec.ts)
