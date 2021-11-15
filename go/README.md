@@ -4,6 +4,14 @@
 * GOROOT: go 的安装路径。Mac 上一般是 `/usr/local/go`。
 * GOPATH: 工作空间。保存 Go 项目代码和第三方依赖包。
 
+### 查看环境变量
+```
+go env 环境变量名
+```
+### 设置环境变量
+```
+go env -w 环境变量名=...
+```
 ## 把依赖装到当前项目目录下
 version >= 1.13 时，使用下面的命令：
 ```
@@ -16,6 +24,11 @@ go env GO111MODULE
 ```
 
 默认会装到 `GO_PATH` 下。
+
+打开了 `GO111MODULE` 后，`GO_PATH` 下不能有 `go.mod`。否则会报：
+```
+$GOPATH/go.mod exists but should not exist
+```
 
 ## 安装包
 ```
@@ -58,6 +71,8 @@ go test -v ./...
 
 ## 包
 一个目录下，只能有一个包。
+
+
 ## import 包
 文章: [仓库，模块和包](https://zhuanlan.zhihu.com/p/392958300)
 
