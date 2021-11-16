@@ -47,6 +47,25 @@ describe('常见写法', () => {
     expect(sum2(_ as any, 1)).toBe(1)
   })
 
+  test('class', () => {
+    class Dog<T> {
+      name: string
+      type: string
+      constructor(name: string, type: string) {
+        this.name = name
+        this.type = type
+      }
+      greet(msg: T): T {
+        return msg
+      }
+    }
+
+    const d = new Dog<string>('拉拉', '拉布拉多')
+    expect(d.name).toBe('拉拉')
+    expect(d.type).toBe('拉布拉多')
+    expect(d.greet('a')).toBe('a')
+  })
+
   test('类型转化', async () => {
     function fetchData(): Promise<any> {
       return new Promise(resolve => resolve(3))
