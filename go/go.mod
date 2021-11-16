@@ -2,6 +2,10 @@ module github/iamjoel/learn-go
 
 go 1.17
 
+// 自引用。不用这个，加载一些包会有问题。
+require github/iamjoel/learn-go v0.0.0
+replace github/iamjoel/learn-go => ./
+
 require (
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect

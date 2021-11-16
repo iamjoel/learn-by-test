@@ -8,11 +8,14 @@
 ```
 go env 环境变量名
 ```
+
 ### 设置环境变量
 ```
-go env -w 环境变量名=...
+go env -w 环境变量名=值
 ```
-## 把依赖装到当前项目目录下
+## GO111MODULE=on 模式
+打开 GO111MODULE=on 模式，才能管理项目依赖包的版本。会把依赖装到当前项目目录下。在该模式下，import 不能用相对路径。
+
 version >= 1.13 时，使用下面的命令：
 ```
 go env -w GO111MODULE=on
@@ -28,6 +31,17 @@ go env GO111MODULE
 打开了 `GO111MODULE` 后，`GO_PATH` 下不能有 `go.mod`。否则会报：
 ```
 $GOPATH/go.mod exists but should not exist
+```
+
+未了方便引用本地包下的一些包，一般加上路径的自引用：
+```
+module github/iamjoel/learn-go
+
+go 1.17
+
+// 自引用。不用这个，加载一些包会有问题。
+require github/iamjoel/learn-go v0.0.0
+replace github/iamjoel/learn-go => ./
 ```
 
 ## 安装包
@@ -58,10 +72,9 @@ func main() {
 }
 ```
 
-
 ## 生成可运行的二进制文件
 ```
-go 路径/文件名.go
+go build 路径/文件名.go
 ```
 
 ## 测试
@@ -70,11 +83,12 @@ go test -v ./...
 ```
 
 ## 包
-一个目录下，只能有一个包。
+一个目录下，只能有一个包。包名可以和目录名不一样。
 
 
 ## import 包
 文章: [仓库，模块和包](https://zhuanlan.zhihu.com/p/392958300)
+
 
 ### 内部包
 内部包只可被直接父级包和同级的相邻包使用。通过定义包名为 internal 即可。
@@ -86,5 +100,4 @@ go test -v ./...
 
 ## 工具
 * [Ginkgo](https://onsi.github.io/ginkgo/) BDD 风格的测试框架。
-
-## 问题
+* [Go for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=golang.Go) VS Code 插件
