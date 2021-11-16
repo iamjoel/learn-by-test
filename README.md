@@ -61,6 +61,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 
 #### TypeScript
 * [常用写法](frontend/src/ts/common.spec.ts)
+* [泛型](frontend/src/ts/generic.spec.ts)
 
 #### CSS
 * [选择器优先级](frontend/src/css/selector-priority/index.e2e.spec.ts)
