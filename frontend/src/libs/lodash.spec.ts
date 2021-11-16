@@ -40,6 +40,13 @@ describe('Lodash', () => {
     expect(curried(1)(_, 3)(2)).toEqual([1, 2, 3])
   })
 
+  test('_.flow: 按顺序调用一系列函数', () => {
+    const sum = (a: number, b: number) => a + b
+    const showRes = (num: number) => `res is ${num}`
+    const sumAndShow = _.flow([sum, showRes])
+    expect(sumAndShow(1, 2)).toBe('res is 3')
+  })
+
   describe('_.random: 生成随机数', () => {
     test('随机整数', () => {
       const randomInt = _.random(0, 5)
