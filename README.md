@@ -56,7 +56,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 * 基础: [if](frontend/src/js/basic/if.spec.ts)，[循环](frontend/src/js/basic/loop.spec.ts)。
 * 数据类型: [数字](frontend/src/js/data-type/number.spec.ts)，[字符串](frontend/src/js/data-type/string.spec.ts)，[正则](frontend/src/js/data-type/regexp.spec.ts)，[数组](frontend/src/js/data-type/array.spec.ts)，[对象](frontend/src/js/data-type/object.spec.ts)，[函数](frontend/src/js/data-type/function.spec.ts)，[枚举](frontend/src/js/data-type/enum.spec.ts)，[Set](frontend/src/js/data-type/set.spec.ts)。
 * [this](frontend/src/js/this/index.spec.ts) 还有 [这里](frontend/src/js/this/index.e2e.spec.ts)
-* ES6+: [Promise](frontend/src/js/es6/promise.spec.ts)，[async/await](frontend/src/js/es6/async-await.spec.ts)，[解构赋值](frontend/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](frontend/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](frontend/src/js/es6/optional-chain.spec.ts)。
+* ES6+: [Promise](frontend/src/js/es6/promise.spec.ts)，[async/await](frontend/src/js/es6/async-await.spec.ts)，[解构赋值](frontend/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](frontend/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](frontend/src/js/es6/optional-chain.spec.ts)，[空值合并运算符(??) 和 逻辑空赋值(??=)](frontend/src/js/es6/nullish-operator.spec.ts)。
 * [DOM](frontend/src/js/dom/index.e2e.spec.ts)
 
 #### TypeScript
