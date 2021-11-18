@@ -2,18 +2,18 @@ import React, { FC } from 'react'
 
 export interface IBtnProps {
   id?: string
-  type: 'primary' | 'danger',
-  onClick: () => void
+  type?: 'primary' | 'danger',
+  onClick?: () => void
 }
 const Btn: FC<IBtnProps> = ({
-  id,
-  type,
+  id = '',
+  type = 'primary',
   children,
   onClick
 }) => {
     return (
       <div
-        id={id || ''}
+        id={id}
         className="btn"
         style={
           {color: type === 'primary' ? 'blue' : 'red'}

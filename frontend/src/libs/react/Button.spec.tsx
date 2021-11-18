@@ -25,6 +25,7 @@ describe('React', () => {
       ReactDOM.render(
         <div>
           <Btn type="primary" id="primary-btn"></Btn>
+          <Btn id="primary-btn2"></Btn>
           <Btn type="danger" id="danger-btn"></Btn>
         </div>,
       container);
@@ -32,6 +33,9 @@ describe('React', () => {
   
     const primaryBtn:HTMLElement = container.querySelector('#primary-btn')
     expect(primaryBtn.style.color).toBe('blue')
+    // 测试默认属性
+    const primaryBtn2:HTMLElement = container.querySelector('#primary-btn2')
+    expect(primaryBtn2.style.color).toBe('blue')
     const dangerBtn:HTMLElement = container.querySelector('#danger-btn')
     expect(dangerBtn.style.color).toBe('red')
   })
