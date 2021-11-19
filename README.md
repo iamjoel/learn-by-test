@@ -81,6 +81,8 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [fs](node/src/fs/index.spec.ts)
 * [path](node/src/path.spec.ts)
 * [EventEmitter](node/src/event-emitter.spec.ts)
+* 第三方库
+  * [lowdb](node/src/libs/lowdb.spec.ts)
 
 ### Go
 * 基础: [变量](go/src/basic/var/var_test.go)，[导入&导出](go/src/basic/pkg-test/pkg_test.go)。

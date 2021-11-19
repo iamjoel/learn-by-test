@@ -20,9 +20,12 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
     "@types/jest": "^27.0.2",
+    "@types/lowdb": "^1.0.11",
     "babel-jest": "^27.2.4",
     "cross-env": "^7.0.3",
     "jest": "^27.2.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  }
 }
