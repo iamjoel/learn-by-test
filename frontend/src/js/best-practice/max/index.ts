@@ -5,7 +5,7 @@ export const max = (arr: number[]): number => {
 }
 
 export const maxSimple = (arr: number[]): number => {
-  const numArr = arr.filter(item => !isNaN(item)).map(item => parseFloat(item))
+  const numArr = arr.filter(item => !isNaN(item)).map(item => parseFloat(item as unknown as string))
   let max = -Infinity
   numArr.forEach(num => {
     if(num > max) {
