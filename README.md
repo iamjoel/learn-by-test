@@ -58,7 +58,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [this](frontend/src/js/this/index.spec.ts) 还有 [这里](frontend/src/js/this/index.e2e.spec.ts)
 * ES6+: [Promise](frontend/src/js/es6/promise.spec.ts)，[async/await](frontend/src/js/es6/async-await.spec.ts)，[解构赋值](frontend/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](frontend/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](frontend/src/js/es6/optional-chain.spec.ts)，[空值合并运算符(??) 和 逻辑空赋值(??=)](frontend/src/js/es6/nullish-operator.spec.ts)。
 * [DOM](frontend/src/js/dom/index.e2e.spec.ts)
-* 最佳实践：[去重](frontend/src/js/best-practice/unique/index.spec.ts)，[最大值](frontend/src/js/best-practice/max/index.spec.ts)，[求和](frontend/src/js/best-practice/sum/index.spec.ts)
+* 最佳实践：[去重](frontend/src/js/best-practice/unique/index.spec.ts)，[最大值](frontend/src/js/best-practice/max/index.spec.ts)，[求和](frontend/src/js/best-practice/sum/index.spec.ts)，[删除元素](frontend/src/js/best-practice/remove/index.spec.ts)
 
 #### TypeScript
 * [常用写法](frontend/src/ts/common.spec.ts)
