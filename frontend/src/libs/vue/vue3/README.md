@@ -8,7 +8,7 @@ npm init vue@latest
 
 ## IDE
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+[VSCode](https://code.visualstudio.com/) + 
 
 ## Customize configuration
 
@@ -52,7 +52,29 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```
 
 ## 生态
-* 构建工具: Vite。
-* 状态管理: pinia。
-* 路由: vue router。
-* 测试：Vitest，Cypress。
+### 路由
+[Vue Router](https://router.vuejs.org/zh/)：^4.0.14。
+
+详细见 [这里](./docs/vue-router.md)
+
+### 构建工具: Vite
+
+### 状态管理: pinia
+
+### 测试
+单元测试，组件测试：Vitest 和 [Vue Test Utils](https://test-utils.vuejs.org/)
+
+
+E2E测试： Cypress。
+
+### 开发插件 
+* Chrome 插件: [devtools](https://github.com/vuejs/devtools)
+* VSCode 插件
+  * [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) 
+  * [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+
+### 更多资源
+* [Awesome Vue.js](https://github.com/vuejs/awesome-vue)
+
+## 其他
+import.meta.env.BASE_URL
