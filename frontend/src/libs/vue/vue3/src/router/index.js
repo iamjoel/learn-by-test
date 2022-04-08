@@ -10,7 +10,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      // redirect: '/home',
+      redirect: '/home',
       name: 'default',
     },
     {
@@ -47,11 +47,11 @@ const router = createRouter({
       // 懒加载
       component: () => import('../views/AboutView.vue')
     },
-    // {
-    //   path: '/:pathMatch(.*)*',
-    //   name: 'NotFound',
-    //   component: NotFound
-    // },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound
+    },
   ]
 })
 

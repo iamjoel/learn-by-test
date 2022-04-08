@@ -21,8 +21,8 @@ const log = () => console.log(111)
     {{route.params.id}}
     请求参数: {{ route.query }}
     <!-- router link 和 push 都没有用 -->
-    <a href="javascript: void(0);" @click="toHome">返回首页</a>
-    <RouterLink to="/">返回首页</RouterLink>
+    <a href="javascript: void(0);" @click="toHome">返回首页</a><br>
+    <RouterLink to="/">router返回首页</RouterLink>
   </main>
 </template>
 
