@@ -1,6 +1,8 @@
 # 组合式 API
 [文档](https://v3.cn.vuejs.org/guide/composition-api-introduction.html)。
 
+[<script setup>](https://vuejs.org/api/sfc-script-setup.html)
+
 ## 生命周期
 onMounted, onUnmounted 等。
 
@@ -26,6 +28,19 @@ reactive更适合定义复杂的数据类型（json/arr）。ref适合定义基�
 直接改内部的值。
 
 ## Props
+声明 & 使用属性。
+```js
+const props = defineProps({
+  name: String
+})
+```
+
+## emit
+声明 & 使用传给父组件的事件。
+
+```js
+const emit = defineEmits(['change'])
+```
 
 ## Slot
 

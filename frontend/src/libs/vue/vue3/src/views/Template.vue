@@ -1,5 +1,6 @@
 <script setup>
 import { ref, reactive } from 'vue'
+import HasProps from '@/views/sub/HasProps.vue'
 
 const list = [
   {
@@ -40,6 +41,8 @@ const changeDeep = () => {
   reactiveObj.deepInfo.a.b = reactiveObj.deepInfo.a.b === 3 ? 4 : 3
 }
 
+const handleNameChange = name => console.log(name) 
+
 </script>
 
 <template>
@@ -69,6 +72,8 @@ const changeDeep = () => {
     <div>reactiveObj name: {{reactiveObj.name}} 深的属性: {{reactiveObj.deepInfo.a.b}}</div>
     <button @click="changeName">改名</button>
     <button @click="changeDeep">改深的属性</button>
+
+    <HasProps :name="refObj.name" @Change="handleNameChange"></HasProps>
   </main>
 </template>
 

@@ -58,6 +58,15 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 详细见 [这里](./docs/vue-router.md)
 
 ### 构建工具: Vite
+配置文件：`vite.config.js`。
+配置路径别名：
+```js
+resolve: {
+  alias: {
+    '@': fileURLToPath(new URL('./src', import.meta.url))
+  }
+}
+```
 
 ### 状态管理: pinia
 
