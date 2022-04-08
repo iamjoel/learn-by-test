@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const list = [
   {
@@ -19,6 +19,27 @@ const list = [
 
 const isShowMore = ref(false)
 const toggleShowMore = () => isShowMore.value = !isShowMore.value
+
+const refObj = ref({name: 'joel', deepInfo: {
+  a: {
+    b: 1
+  }
+}})
+
+const reactiveObj = reactive({name: 'joel-r', deepInfo: {
+  a: {
+    b: 3
+  }
+}});
+const changeName = () => {
+  refObj.value.name = refObj.value.name === 'joel' ? 'jack' : 'joel'
+  reactiveObj.name = reactiveObj.name === 'joel-r' ? 'jack-r' : 'joel-r'
+}
+const changeDeep = () => {
+  refObj.value.deepInfo.a.b = refObj.value.deepInfo.a.b === 1 ? 2 : 1
+  reactiveObj.deepInfo.a.b = reactiveObj.deepInfo.a.b === 3 ? 4 : 3
+}
+
 </script>
 
 <template>
@@ -42,6 +63,12 @@ const toggleShowMore = () => isShowMore.value = !isShowMore.value
       </li>
     </ul>
     <button @click="toggleShowMore">{{isShowMore ? '隐藏更多' : '显示更多'}}</button>
+
+
+    <div>ref name: {{refObj.name}} 深的属性: {{refObj.deepInfo.a.b}}</div>
+    <div>reactiveObj name: {{reactiveObj.name}} 深的属性: {{reactiveObj.deepInfo.a.b}}</div>
+    <button @click="changeName">改名</button>
+    <button @click="changeDeep">改深的属性</button>
   </main>
 </template>
 

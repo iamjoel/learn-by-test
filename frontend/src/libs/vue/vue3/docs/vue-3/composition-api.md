@@ -16,12 +16,14 @@ onMounted, onUnmounted 等。
 <input v-model="count" />
 ```
 
-## 状态
-### ref
+## 响应式
+reactive更适合定义复杂的数据类型（json/arr）。ref适合定义基本数据类型（可接收基本数据类型和对象）
 
-在 js 中，设置和取值，要用 ref.value。在 template 中，设置和取值可以用 ref。
+### ref
+在 js 中，设置和取值，要用 ref.value。在 template 中，设置和取值直接用 ref，不要加 value。
 
 ### reactive
+直接改内部的值。
 
 ## Props
 
