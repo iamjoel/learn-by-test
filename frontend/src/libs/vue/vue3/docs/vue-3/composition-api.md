@@ -4,14 +4,24 @@
 ## 生命周期
 onMounted, onUnmounted 等。
 
-## 状态
-ref 和 reactive
+## 模板语法
+* 循环，条件
+* 绑定属性
+* 绑定类名，样式
+* 绑定事件
 
 ## 表单绑定值
 用 v-model 绑定。
 ```html
 <input v-model="count" />
 ```
+
+## 状态
+### ref
+
+在 js 中，设置和取值，要用 ref.value。在 template 中，设置和取值可以用 ref。
+
+### reactive
 
 ## Props
 
