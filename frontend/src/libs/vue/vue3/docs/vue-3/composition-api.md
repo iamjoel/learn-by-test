@@ -43,6 +43,31 @@ const emit = defineEmits(['change'])
 ```
 
 ## Slot
+组件内 Slot 定义
+```html
+<slot></slot>
+<slot name="a"></slot>
+<li v-for="(item, index) in [1, 2, 3]" :key="item">
+    <slot :item="item" />
+</li>
+```
+
+父组件传入 Slot
+```html
+<SlotDefault>
+    <div>slot 内容</div>
+</SlotDefault>
+
+<SlotMulti>
+    <template v-slot:a>还是往A槽丢</template>
+</SlotMulti>
+
+<SlotWithData>
+    <template v-slot:default="slotProps">
+        <div>item: {{slotProps.item}}</div>
+    </template>
+</SlotWithData>
+```
 
 ## 组件给很深的子组件传值 Provide / Inject
 

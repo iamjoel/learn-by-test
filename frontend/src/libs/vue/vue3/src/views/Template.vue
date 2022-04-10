@@ -1,6 +1,9 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import HasProps from '@/views/sub/HasProps.vue'
+import SlotDefault from '@/views/sub/slot/SlotDefault.vue'
+import SlotMulti from '@/views/sub/slot/SlotMulti.vue'
+import SlotWithData from '@/views/sub/slot/SlotWithData.vue'
 
 const list = [
   {
@@ -73,7 +76,28 @@ const handleNameChange = name => console.log(name)
     <button @click="changeName">改名</button>
     <button @click="changeDeep">改深的属性</button>
 
-    <HasProps :name="refObj.name" @Change="handleNameChange"></HasProps>
+    <HasProps :name="refObj.name" @Change="handleNameChange" />
+
+    <h2>slot</h2>
+    <SlotDefault>
+      <div>slot 内容</div>
+    </SlotDefault>
+    <SlotDefault />
+
+    <SlotMulti>
+        <template v-slot:a>往A槽丢</template>
+        <template v-slot:b>往B槽丢</template>
+    </SlotMulti>
+
+    <SlotMulti>
+        <template v-slot:a>还是往A槽丢</template>
+    </SlotMulti>
+
+    <SlotWithData>
+        <template v-slot:default="slotProps">
+            <div>item: {{slotProps.item}}</div>
+        </template>
+    </SlotWithData>
   </main>
 </template>
 
