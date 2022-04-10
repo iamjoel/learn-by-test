@@ -86,7 +86,8 @@ const handleNameChange = name => console.log(name)
 
     <SlotMulti>
         <template v-slot:a>往A槽丢</template>
-        <template v-slot:b>往B槽丢</template>
+        <!-- 简写 -->
+        <template #b>往B槽丢: 简写</template>
     </SlotMulti>
 
     <SlotMulti>

@@ -60,6 +60,8 @@ const emit = defineEmits(['change'])
 
 <SlotMulti>
     <template v-slot:a>还是往A槽丢</template>
+    <!-- 简写 -->
+    <template #b>往B槽丢: 简写</template>
 </SlotMulti>
 
 <SlotWithData>
