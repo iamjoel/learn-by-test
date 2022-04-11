@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive,computed,  watch, watchEffect } from 'vue'
 import HasProps from '@/views/sub/HasProps.vue'
 import SlotDefault from '@/views/sub/slot/SlotDefault.vue'
 import SlotMulti from '@/views/sub/slot/SlotMulti.vue'
@@ -44,7 +44,17 @@ const changeDeep = () => {
   reactiveObj.deepInfo.a.b = reactiveObj.deepInfo.a.b === 3 ? 4 : 3
 }
 
-const handleNameChange = name => console.log(name) 
+const handleNameChange = name => console.log(name)
+
+const firstTwoChar = computed(() => refObj.value.name.slice(0, 2))
+
+watchEffect(() => {
+  console.log('watchEffect', refObj.value.name)
+})
+
+watch([refObj.value], ([newVal], [oldVal]) => {
+  console.log(`old: ${oldVal.name}, new: ${newVal.name}`)
+})
 
 </script>
 
@@ -71,7 +81,7 @@ const handleNameChange = name => console.log(name)
     <button @click="toggleShowMore">{{isShowMore ? '隐藏更多' : '显示更多'}}</button>
 
 
-    <div>ref name: {{refObj.name}} 深的属性: {{refObj.deepInfo.a.b}}</div>
+    <div>ref name: {{refObj.name}}。前两个字符：{{firstTwoChar}} 深的属性: {{refObj.deepInfo.a.b}}</div>
     <div>reactiveObj name: {{reactiveObj.name}} 深的属性: {{reactiveObj.deepInfo.a.b}}</div>
     <button @click="changeName">改名</button>
     <button @click="changeDeep">改深的属性</button>

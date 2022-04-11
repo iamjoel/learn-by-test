@@ -27,6 +27,28 @@ reactive更适合定义复杂的数据类型（json/arr）。ref适合定义基�
 ### reactive
 直接改内部的值。
 
+## Watch & Computed
+[文档](https://v3.cn.vuejs.org/api/computed-watch-api.html)
+
+computed，虚拟属性:
+```js
+const firstTwoChar = computed(() => refObj.value.name.slice(0, 2))
+```
+
+watchEffect 不需要声明 依赖列表。只要回调里的用到的值发生变化，就会触发回调。
+
+watch 需要依赖列表。可以拿到旧值和新值。
+
+```js
+watchEffect(() => {
+  console.log('watchEffect', refObj.value.name)
+})
+
+watch([refObj.value], ([newVal], [oldVal]) => {
+  console.log(`old: ${oldVal.name}, new: ${newVal.name}`)
+})
+```
+
 ## Props
 声明 & 使用属性。
 ```js
@@ -74,7 +96,6 @@ const emit = defineEmits(['change'])
 ## 组件给很深的子组件传值 Provide / Inject
 
 
-## Watch & Computed
 
 ## 组件复用方式
 ### 高阶组件
