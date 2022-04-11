@@ -97,10 +97,39 @@ const emit = defineEmits(['change'])
 ## 组件给很深的子组件传值 Provide / Inject
 
 
+## 错误处理
+errorCaptured
 
 ## 组件复用方式
 ### 高阶组件
+```js
+import { h } from "@vue/runtime-core"
+// https://vuejs.org/guide/extras/render-function.html
+const WithName = (WrappedComponent) => {
+  return {
+    render() {
+      const props = this.$props || {}
+      return h(WrappedComponent, {
+        name: 'Joel(HOC)',
+        ...props,
+      })
+    }
+  }
+}
 
+export default WithName;
+```
+
+HOC 和 实际绑定在一起：
+```js
+import Info from './Info.vue'
+import WithName from './WithName'
+
+const InfoWithName = WithName(Info)
+export default InfoWithName
+```
+
+有装饰器就爽了~
 
 ### hooks
 ```js

@@ -83,6 +83,7 @@ E2E测试： Cypress。
   * [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
 ### 更多资源
+* [Vue patterns](https://learn-vuejs.github.io/vue-patterns/) Vue 的设计模式。
 * [Awesome Vue.js](https://github.com/vuejs/awesome-vue)
 
 ## 其他

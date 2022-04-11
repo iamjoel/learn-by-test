@@ -7,6 +7,8 @@ import SlotWithData from '@/views/sub/slot/SlotWithData.vue'
 
 import useCount from '@/hooks/useCount'
 
+import InfoWithName from '@/components/hoc/InfoWithName'
+
 const list = [
   {
     id: 1,
@@ -123,6 +125,8 @@ const {
       <button @click="setCount(count + 1)">+</button>
       <button @click="setCount(count - 1)">-</button>
     </div>
+
+    <InfoWithName :age="20" />
   </main>
 </template>
 
