@@ -131,6 +131,27 @@ export default InfoWithName
 
 有装饰器就爽了~
 
+可以用 slot 做一样的事，推荐用 slot。推荐阅读：[Do we need Higher Order Components in Vue.js?](https://medium.com/bethink-pl/do-we-need-higher-order-components-in-vue-js-87c0aa608f48)
+```js
+<script setup>
+  import { computed } from 'vue'
+  import Info from './Info.vue'
+  import useName from './useName'
+
+  const props = defineProps({})
+  const { name } = useName() // 动态值
+  const withNameProps = computed(() => ({
+    ...props,
+    name: name.value,
+  }))
+
+</script>
+<template>
+  <Info v-bind="withNameProps"></Info>
+</template>
+```
+
+
 ### hooks
 ```js
 import { ref, onMounted } from 'vue'

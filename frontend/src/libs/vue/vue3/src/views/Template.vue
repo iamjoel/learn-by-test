@@ -8,6 +8,7 @@ import SlotWithData from '@/views/sub/slot/SlotWithData.vue'
 import useCount from '@/hooks/useCount'
 
 import InfoWithName from '@/components/hoc/InfoWithName'
+import InfoWithNameSlot from '@/components/hoc/WithNameSlot.vue'
 
 const list = [
   {
@@ -127,6 +128,7 @@ const {
     </div>
 
     <InfoWithName :age="20" />
+    <InfoWithNameSlot :age="22" />
   </main>
 </template>
 
