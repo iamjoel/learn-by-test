@@ -1,8 +1,9 @@
 # 组合式 API
-[文档](https://v3.cn.vuejs.org/guide/composition-api-introduction.html)。
+[文档](https://v3.cn.vuejs.org/guide/composition-api-introduction.html)。 
 
 [<script setup>](https://vuejs.org/api/sfc-script-setup.html)
 
+组合式 API 对应的是 响应式 API。组合式 API 是内聚的，响应式 API是非内聚的。
 ## 生命周期
 onMounted, onUnmounted 等。
 
@@ -101,4 +102,21 @@ const emit = defineEmits(['change'])
 ### 高阶组件
 
 
-### 自定义 Option
+### hooks
+```js
+import { ref, onMounted } from 'vue'
+
+export default function useCount() {
+  onMounted(() => {
+    console.log('useCount mounted')
+  })
+  const count = ref(0)
+  const setCount = (val) => {
+    count.value = val
+  }
+  return {
+    count,
+    setCount
+  }
+}
+```

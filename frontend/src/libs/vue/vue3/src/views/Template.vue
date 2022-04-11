@@ -1,9 +1,11 @@
 <script setup>
-import { ref, reactive,computed,  watch, watchEffect } from 'vue'
+import { ref, reactive, computed,  watch, watchEffect } from 'vue'
 import HasProps from '@/views/sub/HasProps.vue'
 import SlotDefault from '@/views/sub/slot/SlotDefault.vue'
 import SlotMulti from '@/views/sub/slot/SlotMulti.vue'
 import SlotWithData from '@/views/sub/slot/SlotWithData.vue'
+
+import useCount from '@/hooks/useCount'
 
 const list = [
   {
@@ -55,6 +57,12 @@ watchEffect(() => {
 watch([refObj.value], ([newVal], [oldVal]) => {
   console.log(`old: ${oldVal.name}, new: ${newVal.name}`)
 })
+
+// 自定义hooks
+const {
+  count,
+  setCount
+} = useCount()
 
 </script>
 
@@ -109,6 +117,12 @@ watch([refObj.value], ([newVal], [oldVal]) => {
             <div>item: {{slotProps.item}}</div>
         </template>
     </SlotWithData>
+
+    <div>
+      count: {{count}} 
+      <button @click="setCount(count + 1)">+</button>
+      <button @click="setCount(count - 1)">-</button>
+    </div>
   </main>
 </template>
 
