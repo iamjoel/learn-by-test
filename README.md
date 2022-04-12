@@ -70,6 +70,10 @@ expect(posYArr[1]).toBe(posYArr[2])
 
 #### 第三方库
 * [React](frontend/src/libs/react/Button.spec.tsx)
+* Vue3
+  * 模板语法：[循环](frontend/src/libs/vue/vue3/src/components/template/Repeat.spec.js)
+  * 组合式 API
+    * [属性](frontend/src/libs/vue/vue3/src/components/data/Props.spec.js)
 * 基础库工具库: [Lodash](frontend/src/libs/lodash.spec.ts)，[moment](frontend/src/libs/moment.spec.ts)，[query-string](frontend/src/libs/query-string.spec.ts)。
 * 测试库: [Jest](frontend/src/libs/jest/index.spec.ts)，[Puppeteer](frontend/src/libs/puppeteer/index.e2e.spec.ts)。
 * 数据管理: [状态机:XState](frontend/src/libs/data-manage/xstate.spec.ts)
