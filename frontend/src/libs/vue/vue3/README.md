@@ -71,10 +71,10 @@ resolve: {
 ### 状态管理: pinia
 
 ### 测试
-单元测试，组件测试：Vitest 和 [Vue Test Utils](https://test-utils.vuejs.org/)
+单元测试，组件测试：[Vitest](https://cn.vitest.dev/) 和 [Vue Test Utils](https://test-utils.vuejs.org/)
 
 
-E2E测试： Cypress。
+[这里](./docs/test.md)。
 
 ### 开发插件 
 * Chrome 插件: [devtools](https://github.com/vuejs/devtools)
