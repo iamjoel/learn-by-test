@@ -83,10 +83,13 @@ resolve: {
   * [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
 ### 库
+* [VueUse](https://vueuse.org/) Vue hooks 库。
 * [surely](https://www.surely.cool/) 高性能 Table 组件。
+
 ### 更多资源
 * [Vue patterns](https://learn-vuejs.github.io/vue-patterns/) Vue 的设计模式。
-* [Awesome Vue.js](https://github.com/vuejs/awesome-vue)
+* [Demos](https://vuejs.org/examples/)
+* [Awesome Vue.js](https://github.com/vuejs/awesome-vue) [Vue3 的分支](https://github.com/vuejs/awesome-vue/tree/vue3-compatible)
 
 ## 其他
 import.meta.env.BASE_URL
