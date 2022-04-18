@@ -10,5 +10,26 @@
 * [原型](./creational/prototype/index.spec.js)
 * [单例](./creational/singleton/index.spec.js)
 
+## 结构模式(Structural Patterns)
+在不改变原对象的情况下，给对象新增功能。
+
+* [适配器](structural/adapt/index.spec.js) 用适配器来匹配原来不匹配的输入输出。
+* 桥接
+* 组合
+* 装饰器
+* 代理
+
+## 行为模式(Behavioral Patterns)
+对象之间的通信
+
+* 链
+* 命令模式
+* 解释？
+* 迭代器
+* 策略模式
+* 模板模式
+* 访问者模式
+
+
 ## 资源 & 参考
 * [Design Patterns JS](https://github.com/fbeline/design-patterns-JS)
