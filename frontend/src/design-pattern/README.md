@@ -25,16 +25,16 @@
 对象之间的通信。
 
 13 [责任链模式](behavioral/chain-of-resp/index.spec.js)
-14 命令模式
-15 解释器模式
-16 迭代器模式
-17 中介者模式
-18 备忘录模式
-19 观察者模式
-20 状态模式
-21 策略模式
-22 模板模式
-23 访问者模式
+14 [命令模式](behavioral/command/index.spec.js) 将执行的命令封装成对象。
+15 [解释器模式](behavioral/interpreter/index.spec.js)
+16 [迭代器模式](behavioral/iterator/index.spec.js)
+17 [中介者模式](behavioral/mediator/index.spec.js)
+18 [备忘录模式](behavioral/memento/index.spec.js)
+19 [观察者模式](behavioral/observer/index.spec.js)
+20 [状态模式](behavioral/state/index.spec.js)
+21 [策略模式](behavioral/strategy/index.spec.js)
+22 [模板模式](behavioral/template/index.spec.js)
+23 [访问者模式](behavioral/visitor/index.spec.js)
 
 
 ## 资源 & 参考
