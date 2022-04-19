@@ -15,7 +15,7 @@
 
 * [适配器](structural/adapt/index.spec.js) 用适配器来匹配原来不匹配的输入输出。
 * [桥接模式](structural/bridge/index.spec.js) 把抽象和实现化接耦。
-* 组合
+* [组合模式](structural/composite/index.spec.js) 将多个类似的对象放在一起，做为一个对象。
 * 装饰器
 * 代理
 
