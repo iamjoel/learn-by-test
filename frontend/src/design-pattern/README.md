@@ -29,7 +29,7 @@
 15 [解释器模式](behavioral/interpreter/index.spec.js) 解析上下文。  
 16 [迭代器模式](behavioral/iterator/index.spec.js) 提供遍历访问集合的方法。  
 17 [中介者模式](behavioral/mediator/index.spec.js) 用中介来降低多个对象通信的复杂度。将对象通信的 P2P 的网状结果 变成 P2一个中心 的星状结构。  
-18 [备忘录模式](behavioral/memento/index.spec.js)  
+18 [备忘录模式](behavioral/memento/index.spec.js) 保存对象的状态，以便在某时恢复。 
 19 [观察者模式](behavioral/observer/index.spec.js)  
 20 [状态模式](behavioral/state/index.spec.js)
 21 [策略模式](behavioral/strategy/index.spec.js)  
