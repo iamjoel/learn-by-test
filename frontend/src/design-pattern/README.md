@@ -27,7 +27,7 @@
 13 [责任链模式](behavioral/chain-of-resp/index.spec.js) 将处理能力对象形成一个链，处理时，将目标顺着链一个个传下去。  
 14 [命令模式](behavioral/command/index.spec.js) 将执行的命令封装成对象。  
 15 [解释器模式](behavioral/interpreter/index.spec.js) 解析上下文。  
-16 [迭代器模式](behavioral/iterator/index.spec.js)  
+16 [迭代器模式](behavioral/iterator/index.spec.js) 提供遍历访问集合的方法。  
 17 [中介者模式](behavioral/mediator/index.spec.js)  
 18 [备忘录模式](behavioral/memento/index.spec.js)  
 19 [观察者模式](behavioral/observer/index.spec.js)  
