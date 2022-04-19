@@ -18,6 +18,7 @@
 * [组合模式](structural/composite/index.spec.js) 将多个类似的对象放在一起，做为一个对象。
 * [装饰器模式](structural/decorate/index.spec.js) 动态改变原有对象的行为： 可以是覆盖，也可以是新增函数。
 * [外观模式](structural/facade/index.spec.js) 给大(复杂)的对象提供简单的接口，以此来隐藏系统的复杂性。
+* [享元模式](structural/flyweight/index.spec.js) 尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。主要用于减少创建对象的数量，以减少内存占用和提高性能。
 * 代理
 
 ## 行为模式(Behavioral Patterns)
@@ -34,3 +35,4 @@
 
 ## 资源 & 参考
 * [Design Patterns JS](https://github.com/fbeline/design-patterns-JS)
+* [设计模式 - 菜鸟教程](https://www.runoob.com/design-pattern/design-pattern-tutorial.html)
