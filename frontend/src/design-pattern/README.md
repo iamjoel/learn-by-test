@@ -16,7 +16,8 @@
 * [适配器](structural/adapt/index.spec.js) 用适配器来匹配原来不匹配的输入输出。
 * [桥接模式](structural/bridge/index.spec.js) 把抽象和实现化接耦。
 * [组合模式](structural/composite/index.spec.js) 将多个类似的对象放在一起，做为一个对象。
-* [装饰器](structural/decorate/index.spec.js) 动态改变原有对象的行为： 可以是覆盖，也可以是新增函数。
+* [装饰器模式](structural/decorate/index.spec.js) 动态改变原有对象的行为： 可以是覆盖，也可以是新增函数。
+* [外观模式](structural/facade/index.spec.js) 给大(复杂)的对象提供简单的接口，以此来隐藏系统的复杂性。
 * 代理
 
 ## 行为模式(Behavioral Patterns)
