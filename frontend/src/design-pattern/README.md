@@ -33,7 +33,7 @@
 19 [观察者模式](behavioral/observer/index.spec.js) 也称发布/订阅模式。观察的数据改变时，观察者均会收到信息。  
 20 [状态模式](behavioral/state/index.spec.js) 对象的行为基于对象的状态。  
 21 [策略模式](behavioral/strategy/index.spec.js) 对某种情况有不同的策略(处理方式)。不同策略的签名是一致的。对策略的封装。  
-22 [模板模式](behavioral/template/index.spec.js)  
+22 [模板模式](behavioral/template/index.spec.js) 一个类定义了整个业务流程。业务流程的部分是有不同的，由不同的子类来实现。   
 23 [访问者模式](behavioral/visitor/index.spec.js)  
 
 
