@@ -1,19 +1,19 @@
 # 设计模式
 23 个设计模式 (GoF)。
 
-## 创建型(Creational Patterns)
+## 创建型模式(Creational Patterns)
 将创建对象的过程与业务逻辑解藕。
 
-01 [抽象工厂](./creational/abstract-factory/index.spec.js) 工厂来管理相似的类。这些类的构造函数的参数是相同的。实例根据传入的类的名字和参数，由工厂来生产。将创建不同类型的实例的过程解藕了。  
-02 [工厂方法](./creational/factory-method/index.spec.js) 实例由工厂来生产。将创建实例和参数解藕了。  
-03 [建造者](./creational/builder/index.spec.js) 一个对象很复杂。给其设置不同的特征呈现。  
-04 [原型](./creational/prototype/index.spec.js)  
-05 [单例](./creational/singleton/index.spec.js)
+01 [抽象工厂模式](./creational/abstract-factory/index.spec.js) 工厂来管理相似的类。这些类的构造函数的参数是相同的。实例根据传入的类的名字和参数，由工厂来生产。将创建不同类型的实例的过程解藕了。  
+02 [工厂模式](./creational/factory-method/index.spec.js) 实例由工厂来生产。将创建实例和参数解藕了。  
+03 [建造者模式](./creational/builder/index.spec.js) 一个对象很复杂。给其设置不同的特征呈现。  
+04 [原型模式](./creational/prototype/index.spec.js)  
+05 [单例模式](./creational/singleton/index.spec.js)
 
-## 结构模式(Structural Patterns)
+## 结构型模式(Structural Patterns)
 在不改变原对象的情况下，给对象新增功能。
 
-06 [适配器](structural/adapt/index.spec.js) 用适配器来匹配原来不匹配的输入输出。  
+06 [适配器模式](structural/adapt/index.spec.js) 用适配器来匹配原来不匹配的输入输出。  
 07 [桥接模式](structural/bridge/index.spec.js) 把抽象和实现化接耦。  
 08 [组合模式](structural/composite/index.spec.js) 将多个类似的对象放在一起，做为一个对象。  
 09 [装饰器模式](structural/decorate/index.spec.js) 动态改变原有对象的行为： 可以是覆盖，也可以是新增函数。  
@@ -21,7 +21,7 @@
 11 [享元模式](structural/flyweight/index.spec.js) 尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。主要用于减少创建对象的数量，以减少内存占用和提高性能。  
 12 [代理模式](structural/proxy/index.spec.js) 代理对象代理了内部对象的访问和修改。
 
-## 行为模式(Behavioral Patterns)
+## 行为型模式(Behavioral Patterns)
 对象之间的通信。
 
 13 [责任链模式](behavioral/chain-of-resp/index.spec.js) 将处理能力对象形成一个链，处理时，将目标顺着链一个个传下去。  
@@ -33,8 +33,8 @@
 19 [观察者模式](behavioral/observer/index.spec.js) 也称发布/订阅模式。观察的数据改变时，观察者均会收到信息。  
 20 [状态模式](behavioral/state/index.spec.js) 对象的行为基于对象的状态。  
 21 [策略模式](behavioral/strategy/index.spec.js) 对某种情况有不同的策略(处理方式)。不同策略的签名是一致的。对策略的封装。  
-22 [模板模式](behavioral/template/index.spec.js) 一个类定义了整个业务流程。业务流程的部分是有不同的，由不同的子类来实现。   
-23 [访问者模式](behavioral/visitor/index.spec.js)  
+22 [模板模式](behavioral/template/index.spec.js) 一个类定义了整个业务流程。业务流程的部分是有不同的，由不同的子类来实现。  
+23 [访问者模式](behavioral/visitor/index.spec.js) 将对对象的访问从对象中解藕出来。  
 
 
 ## 资源 & 参考
