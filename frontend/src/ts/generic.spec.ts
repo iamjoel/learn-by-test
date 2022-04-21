@@ -1,7 +1,7 @@
 describe('泛型', () => {
   test('泛型就是将类型参数传进去', () => {
     // T=string 中， string 是默认类型。
-    function push<T=string>(list: T[], item: T): T[] {
+    function push<T=string> (list: T[], item: T): T[] {
       const res = [...list, item]
       return res
     }

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/**/*.js",
-    "fix": "eslint --fix src/**/*.js",
+    "lint": "eslint src/**/*.js src/**/*.ts",
+    "fix": "eslint --fix src/**/*.js src/**/*.ts",
     "test": "cross-env TYPE=all jest",
     "test:unit": "cross-env TYPE=unit jest",
     "test:e2e": "cross-env TYPE=e2e jest",
@@ -28,6 +28,7 @@
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "babel-jest": "^27.2.4",
     "cross-env": "^7.0.3",
     "eslint": "^8.13.0",
@@ -37,7 +38,8 @@
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^27.2.5",
     "jest-html-reporters": "^2.1.6",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "typescript": "^4.6.3"
   },
   "dependencies": {
     "@types/lodash": "^4.14.176",

@@ -11,7 +11,7 @@ describe('if', () => {
       ``,
       null,
       undefined,
-    ]
+    ];
     falsyValues.forEach(item => {
       if(item) {} else {
         mockFn()

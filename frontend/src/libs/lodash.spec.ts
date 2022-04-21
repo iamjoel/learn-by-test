@@ -29,8 +29,8 @@ describe('Lodash', () => {
   })
 
   test('_.curry: 柯里化', () => {
-    const abc = function(a: any, b: any, c: any) {
-      return [a, b, c];
+    const abc = function (a: any, b: any, c: any) {
+      return [a, b, c]
     }
     const curried = _.curry(abc)
 
@@ -53,7 +53,7 @@ describe('Lodash', () => {
       expect(Number.isInteger(randomInt)).toBe(true)
       expect(randomInt >= 0 && randomInt <= 5).toBe(true)
       // 默认值是 0，1
-      expect(_.random() >=0 && _.random() <=1).toBe(true)
+      expect(_.random() >= 0 && _.random() <= 1).toBe(true)
     })
 
     test('随机小数', () => {
