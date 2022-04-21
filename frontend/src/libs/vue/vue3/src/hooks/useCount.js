@@ -1,6 +1,6 @@
 import { ref, onMounted } from 'vue'
 
-export default function useCount() {
+export default function useCount () {
   onMounted(() => {
     console.log('useCount mounted')
   })

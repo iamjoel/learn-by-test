@@ -1,48 +1,48 @@
 class TrafficLight {
-    constructor(name, nextStatus) {
-        this.name = name
-        this.nextStatus = nextStatus
-    }
-    
-    next() {
-        return new this.nextStatus()
-    }
+  constructor (name, NextStatus) {
+    this.name = name
+    this.NextStatus = NextStatus
+  }
 
-    getName() {
-        return this.name
-    }
+  next () {
+    return new this.NextStatus()
+  }
 
-    getAction() {
-        return 'unknown'
-    }
+  getName () {
+    return this.name
+  }
+
+  getAction () {
+    return 'unknown'
+  }
 }
 
-export class RedLight extends TrafficLight{
-    constructor() {
-        super('red', GreenLight)
-    }
+export class RedLight extends TrafficLight {
+  constructor () {
+    super('red', GreenLight)
+  }
 
-    getAction() {
-        return 'stop'
-    }
+  getAction () {
+    return 'stop'
+  }
 }
 
-class YellowLight extends TrafficLight{
-    constructor() {
-        super('yellow', RedLight)
-    }
+class YellowLight extends TrafficLight {
+  constructor () {
+    super('yellow', RedLight)
+  }
 
-    getAction() {
-        return 'wait'
-    }
+  getAction () {
+    return 'wait'
+  }
 }
 
-class GreenLight extends TrafficLight{
-    constructor() {
-        super('green', YellowLight)
-    }
+class GreenLight extends TrafficLight {
+  constructor () {
+    super('green', YellowLight)
+  }
 
-    getAction() {
-        return 'go'
-    }
+  getAction () {
+    return 'go'
+  }
 }

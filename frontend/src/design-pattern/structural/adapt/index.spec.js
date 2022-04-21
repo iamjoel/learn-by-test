@@ -1,4 +1,4 @@
-import { machineJapan, voltageChina, adaptChinaToJapanVoltage} from './'
+import { machineJapan, voltageChina, adaptChinaToJapanVoltage } from './'
 
 describe('adapt', () => {
   test('adapt china voltage to japan machine', () => {

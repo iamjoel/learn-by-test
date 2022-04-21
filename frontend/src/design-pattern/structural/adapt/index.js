@@ -1,5 +1,5 @@
 export function machineJapan (voltage) {
-  if(voltage !== 110) {
+  if (voltage !== 110) {
     return false
   }
   return true

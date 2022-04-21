@@ -1,4 +1,4 @@
-import SuperMan from "./index"
+import SuperMan from './index'
 
 describe('singleton', () => {
   test('singleton', () => {

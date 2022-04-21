@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: '/',
       redirect: '/home',
-      name: 'default',
+      name: 'default'
     },
     {
       path: '/home',
@@ -27,7 +27,7 @@ const router = createRouter({
           path: '/other/sub-b',
           name: 'sub-b',
           component: SubB
-        },
+        }
       ]
     },
     {
@@ -56,7 +56,7 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: NotFound
-    },
+    }
   ]
 })
 

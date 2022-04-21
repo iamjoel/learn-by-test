@@ -1,4 +1,4 @@
-import { RedCircle, GreenCircle, Circle} from './'
+import { RedCircle, GreenCircle, Circle } from './'
 
 describe('bridge', () => {
   test('bridge', () => {

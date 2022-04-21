@@ -1,23 +1,26 @@
 class Color {
-  constructor(name) {
+  constructor (name) {
     this.name = name
   }
 }
 
 export class ColorFactory {
-  constructor() {
-    this.colors = {};
+  constructor () {
+    this.colors = {}
   }
+
   add (name) {
-    let color = this.colors[name];
-    if (color) return color;
-    this.colors[name] = new Color(name);
-    return this.colors[name];
-  }
-  getColor(name) {
+    const color = this.colors[name]
+    if (color) return color
+    this.colors[name] = new Color(name)
     return this.colors[name]
   }
-  getColors() {
+
+  getColor (name) {
+    return this.colors[name]
+  }
+
+  getColors () {
     return this.colors
   }
 };

@@ -1,12 +1,12 @@
 class SuperMan {
-  constructor(name) {
+  constructor (name) {
     if (typeof SuperMan.instance === 'object') {
-      return SuperMan.instance;
+      return SuperMan.instance
     }
-    this.name = 'Joel';
-    SuperMan.instance = this;
-    return this;
+    this.name = 'Joel'
+    SuperMan.instance = this
+    return this
   }
 }
 
-export default SuperMan;
+export default SuperMan

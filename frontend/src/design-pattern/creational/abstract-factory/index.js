@@ -1,5 +1,5 @@
 function animalMaker (type, name) {
-  if(type === 'dog') {
+  if (type === 'dog') {
     return dogFactory(name)
   }
   return catFactory(name)
@@ -10,10 +10,11 @@ function dogFactory (name) {
 }
 
 class Dog {
-  constructor(name) {
+  constructor (name) {
     this.name = name
   }
-  greet() {
+
+  greet () {
     return 'Woof'
   }
 }
@@ -23,10 +24,11 @@ function catFactory (name) {
 }
 
 class Cat {
-  constructor(name) {
+  constructor (name) {
     this.name = name
   }
-  greet() {
+
+  greet () {
     return 'Miao'
   }
 }

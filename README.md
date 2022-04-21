@@ -1,4 +1,5 @@
 # 通过写测试用例来学习
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com) 
 [![learn by test](https://circleci.com/gh/iamjoel/learn-by-test.svg?style=svg)](https://circleci.com/gh/iamjoel/learn-by-test)
 
 通过写测试用例来学习是一种**高效的学习方法**。

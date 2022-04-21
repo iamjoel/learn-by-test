@@ -1,15 +1,15 @@
-import { h } from "@vue/runtime-core"
+import { h } from '@vue/runtime-core'
 // https://vuejs.org/guide/extras/render-function.html
 const WithName = (WrappedComponent) => {
   return {
-    render() {
+    render () {
       const props = this.$props || {}
       return h(WrappedComponent, {
         name: 'Joel(HOC)',
-        ...props,
+        ...props
       })
     }
   }
 }
 
-export default WithName;
+export default WithName

@@ -1,4 +1,4 @@
-import { Computer, CPU, Memory} from './'
+import { Computer, CPU, Memory } from './'
 
 describe('composite', () => {
   test('composite cpu', () => {
