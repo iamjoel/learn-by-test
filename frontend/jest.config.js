@@ -1,9 +1,9 @@
 const type = process.env.TYPE
 let testMatch
-
+// testMatch 规则 https://github.com/micromatch/micromatch
 switch(type) {
   case 'unit':
-    testMatch = ['**/?(*.)+(spec|test).(js|ts|tsx)', '!**/?(*.)+(e2e|api).(spec|test).(js|ts|tsx)']
+    testMatch = ['**/?(*.)+(spec|test).(js|ts|tsx)', '!**/?(*.)+(e2e|api).(spec|test).(js|ts|tsx)', '!**/vue/**']
     break
   case 'e2e': 
     testMatch = ['**/?(*.)+(e2e.)(spec|test).(js|ts|tsx)']
