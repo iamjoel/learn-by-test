@@ -1,4 +1,5 @@
-import serverAndBrowser, {Page, StopFn} from '../../utils/e2e-setup'
+import path from 'path'
+import serverAndBrowser, { Page, StopFn } from '../../utils/e2e-setup'
 // https://zhaoqize.github.io/puppeteer-api-zh_CN/#?product=Puppeteer&version=v10.0.0&show=api-class-puppeteer
 
 describe('DOM', () => {
@@ -7,7 +8,7 @@ describe('DOM', () => {
 
   beforeAll(async () => {
     const res = await serverAndBrowser({
-      rootPath: `${__dirname}/code`,
+      rootPath: path.join(__dirname, 'code'),
       port: 3006
     })
     stop = res.stop
@@ -20,11 +21,11 @@ describe('DOM', () => {
 
   test('获取 DOM 信息', async () => {
     const {
-      width,
+      width
     } = await page.evaluate(() => {
       const dom = document.querySelector('#tar')
       return {
-        width: dom.clientWidth,
+        width: dom.clientWidth
       }
     })
     expect(width).toBe(100)
@@ -38,14 +39,12 @@ describe('DOM', () => {
     // 多个
     const itemLens = await page.$$eval('.item', elems => elems.length)
     expect(itemLens).toBe(3)
-  
   })
 
   test('填写表单', async () => {
     await page.type('#input', 'abc')
     const inputValue = await page.$eval('#input', elem => (elem as HTMLInputElement).value)
     expect(inputValue).toBe('abc')
-
 
     await page.select('#select', 'joel')
     const selectValue = await page.$eval('#select', elem => (elem as HTMLInputElement).value)

@@ -1,4 +1,4 @@
-import b, {a, hello, aa, bb} from './demo'
+import b, { a, hello, aa, bb } from './demo'
 
 describe('JavaScript Modules', () => {
   test('JavaScript Modules', () => {

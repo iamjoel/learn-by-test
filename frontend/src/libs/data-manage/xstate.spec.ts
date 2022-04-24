@@ -8,12 +8,11 @@ describe('XState', () => {
       id: 'trafficLight',
       initial: 'green',
       states: {
-        green: { on: { NEXT: 'yellow', SKIP: 'red'}}, // 事件名为大写
+        green: { on: { NEXT: 'yellow', SKIP: 'red' } }, // 事件名为大写
         yellow: { on: { NEXT: 'red' } },
-        red:  { on: { NEXT: 'green' } },
+        red: { on: { NEXT: 'green' } }
       }
     })
-
 
     // 算某个状态，执行某个操作后的下一个状态
     const currentState = 'green'

@@ -1,5 +1,3 @@
-import { max } from "lodash"
-
 describe('数字', () => {
   test('数字判断: typeof', () => {
     expect(typeof 3 === 'number').toBe(true)
@@ -22,8 +20,8 @@ describe('数字', () => {
   test('小数转整数', () => {
     expect(Math.ceil(4.3)).toBe(5) // 向上取整
     expect(Math.floor(4.9)).toBe(4) // 向下取整
-    expect(Math.round(4.4)).toBe(4) //四舍五入
-    expect(Math.round(4.5)).toBe(5) //四舍五入
+    expect(Math.round(4.4)).toBe(4) // 四舍五入
+    expect(Math.round(4.5)).toBe(5) // 四舍五入
   })
 
   test('字符串转数字', () => {

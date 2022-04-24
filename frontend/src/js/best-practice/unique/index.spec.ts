@@ -6,11 +6,11 @@ describe('去重', () => {
   })
 
   test('uniqueObj', () => {
-    const arr = [1, 2, 3, 1, 2, 1].map(i => ({id: i}))
+    const arr = [1, 2, 3, 1, 2, 1].map(i => ({ id: i }))
     expect(uniqueObj(
       arr,
       (i: {id: number}) => i.id
-    )).toEqual([1, 2, 3].map(i => ({id: i})))
+    )).toEqual([1, 2, 3].map(i => ({ id: i })))
   })
 
   test('uniqUseSet', () => {

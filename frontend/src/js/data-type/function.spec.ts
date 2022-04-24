@@ -1,6 +1,6 @@
 describe('函数', () => {
   test('获取函数的所有参数', () => {
-    function getArgs(a: number, b: number) {
+    function getArgs (a: number, b: number) {
       return Array.from(arguments)
     }
 
@@ -11,11 +11,11 @@ describe('函数', () => {
   })
 
   test('参数个数', () => {
-    function f1() {}
+    function f1 () {}
     expect(f1.length).toBe(0)
-    function f2(a: number) {}
+    function f2 (a: number) {}
     expect(f2.length).toBe(1)
-    function f3(a: number, b: number) {}
+    function f3 (a: number, b: number) {}
     expect(f3.length).toBe(2)
 
     const f4 = (a: number, b: number) => {}
@@ -23,8 +23,8 @@ describe('函数', () => {
   })
 
   test('可选参数', () => {
-    function sum(a?: number, ...rest: number[]) {
-      if(rest.length === 0) {
+    function sum (a?: number, ...rest: number[]) {
+      if (rest.length === 0) {
         return a
       }
       return rest.reduce((prev, curr) => prev + curr, a)
@@ -35,7 +35,7 @@ describe('函数', () => {
   })
 
   test('参数默认值', () => {
-    function f1(name:string='Joel') {
+    function f1 (name:string = 'Joel') {
       return name
     }
     expect(f1()).toBe('Joel')

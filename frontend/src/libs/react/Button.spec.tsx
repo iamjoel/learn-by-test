@@ -28,9 +28,9 @@ describe('React', () => {
           <Btn id="primary-btn2"></Btn>
           <Btn type="danger" id="danger-btn"></Btn>
         </div>,
-      container);
+        container)
     })
-  
+
     const primaryBtn:HTMLElement = container.querySelector('#primary-btn')
     expect(primaryBtn.style.color).toBe('blue')
     // 测试默认属性
@@ -41,9 +41,9 @@ describe('React', () => {
   })
   test('测试children', () => {
     act(() => {
-      ReactDOM.render(<Btn type="primary">abc</Btn>, container);
+      ReactDOM.render(<Btn type="primary">abc</Btn>, container)
     })
-  
+
     const btn = container.querySelector('.btn')
     expect(btn.textContent).toBe('abc')
   })
@@ -51,7 +51,7 @@ describe('React', () => {
   test('测试回调', () => {
     const cb = jest.fn()
     act(() => {
-      ReactDOM.render(<Btn type="primary" onClick={cb}></Btn>, container);
+      ReactDOM.render(<Btn type="primary" onClick={cb}></Btn>, container)
     })
     const btn: HTMLElement = container.querySelector('.btn')
     btn.click()

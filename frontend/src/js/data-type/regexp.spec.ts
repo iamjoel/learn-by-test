@@ -6,6 +6,7 @@ describe('正则', () => {
   test('配置数字: [0-9]', () => {
     expect(/^[0-9]{10}$/.test('0123456789')).toBe(true)
   })
+  // eslint-disable-next-line no-useless-escape
   test('配置单个字符: \w', () => {
     // 等价于 [A-Za-z0-9_]
     expect(/^[0-9]{10}$/.test('0123456789')).toBe(true)
@@ -15,6 +16,7 @@ describe('正则', () => {
   test('配置中文: [\u4e00-\u9fa5]', () => {
     expect(/^[\u4e00-\u9fa5]{2}$/.test('你好')).toBe(true)
   })
+  // eslint-disable-next-line no-useless-escape
   test('匹配空白字符: \s', () => {
     // 等价于[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]
     expect(/\s/.test(' ')).toBe(true)

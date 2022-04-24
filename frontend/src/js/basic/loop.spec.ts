@@ -1,7 +1,7 @@
 describe('循环', () => {
   test('for', () => {
     const fn = jest.fn()
-    for(let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       fn()
     }
     expect(fn).toBeCalledTimes(5)
@@ -10,7 +10,7 @@ describe('循环', () => {
   test('while', () => {
     const fn = jest.fn()
     let i = 0
-    while(i < 5) {
+    while (i < 5) {
       fn()
       i++
     }

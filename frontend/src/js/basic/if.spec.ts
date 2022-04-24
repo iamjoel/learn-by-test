@@ -7,13 +7,15 @@ describe('if', () => {
       -0,
       NaN,
       '',
+      // eslint-disable-next-line quotes
       "",
+      // eslint-disable-next-line quotes
       ``,
       null,
-      undefined,
-    ];
+      undefined
+    ]
     falsyValues.forEach(item => {
-      if(item) {} else {
+      if (!item) {
         mockFn()
       }
     })

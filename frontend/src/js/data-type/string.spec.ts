@@ -1,8 +1,8 @@
 describe('字符串', () => {
   test('类型判断', () => {
     expect(typeof 'a' === 'string').toBe(true)
-    expect(typeof "a" === 'string').toBe(true)
-    expect(typeof `a` === 'string').toBe(true)
+    expect(typeof 'a' === 'string').toBe(true)
+    expect(typeof 'a' === 'string').toBe(true)
     expect(typeof 3 === 'string').toBe(false)
   })
 
@@ -38,11 +38,11 @@ describe('字符串', () => {
   })
 
   test('替换:replace, replaceAll', () => {
-    const str = `I'm Joel`
-    expect(str.replace('Joel', 'Jack')).toBe(`I'm Jack`)
-    expect(str.replace(/J\w*/, 'Jack')).toBe(`I'm Jack`)
+    const str = 'I\'m Joel'
+    expect(str.replace('Joel', 'Jack')).toBe('I\'m Jack')
+    expect(str.replace(/J\w*/, 'Jack')).toBe('I\'m Jack')
 
-    expect(str).toBe(`I'm Joel`)
+    expect(str).toBe('I\'m Joel')
 
     expect('abcabc'.replace('a', 'b')).toBe('bbcabc')
     expect('abcabc'.replace(/a/g, 'b')).toBe('bbcbbc')

@@ -1,16 +1,17 @@
+/* eslint-disable n/no-callback-literal */
 import axios from 'axios'
 import { fetchUser } from './utils/service'
-// 注意 jest.mock 要在顶层调用，在 test() 调用不生效。
-jest.mock('axios')
 
 import getGuid, { getYear, getMonth } from './utils/get-info'
+// 注意 jest.mock 要在顶层调用，在 test() 调用不生效。
+jest.mock('axios')
 jest.mock('./utils/get-info', () => {
   const originalModule = jest.requireActual('./utils/get-info')
   return {
     __esModule: true,
     ...originalModule,
     default: () => 'abc',
-    getYear: () => 2021,
+    getYear: () => 2021
   }
 })
 
@@ -19,11 +20,11 @@ describe('Jest', () => {
     test('相等', () => {
       expect(7).toBe(7)
       expect(7).not.toBe(3)
-      expect({name: 'Joel'}).not.toBe({name: 'Joel'})
+      expect({ name: 'Joel' }).not.toBe({ name: 'Joel' })
     })
 
     test('引用类型值的深度相等', () => {
-      expect({name: 'Joel'}).toEqual({name: 'Joel'})
+      expect({ name: 'Joel' }).toEqual({ name: 'Joel' })
       expect([1]).toEqual([1])
       expect([1, [[[1]]]]).toEqual([1, [[[1]]]])
     })
@@ -55,8 +56,8 @@ describe('Jest', () => {
       const cb = jest.fn()
       cb(1, 2)
       expect(cb).toHaveBeenCalledWith(1, 2)
-      cb([1], {name: 'Joel'})
-      expect(cb).toHaveBeenCalledWith([1], {name: 'Joel'})
+      cb([1], { name: 'Joel' })
+      expect(cb).toHaveBeenCalledWith([1], { name: 'Joel' })
     })
 
     test('被多次调用时的参数', () => {
@@ -72,7 +73,7 @@ describe('Jest', () => {
 
   describe('测试异步代码', () => {
     test('回调类型异步: 通过在回调中传入 done', done => {
-      function fetchNameCallback(cb: (name: string) => void) {
+      function fetchNameCallback (cb: (name: string) => void) {
         setTimeout(() => {
           cb('Joel')
         }, 1000)
@@ -84,12 +85,13 @@ describe('Jest', () => {
       })
     })
 
-    function fetchName(throwError?: boolean) {
+    function fetchName (throwError?: boolean) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
-          if(!throwError) {
+          if (!throwError) {
             resolve('Joel')
           } else {
+            // eslint-disable-next-line prefer-promise-reject-errors
             reject('error happened')
           }
         }, 1000)
@@ -100,7 +102,7 @@ describe('Jest', () => {
       fetchName().then(name => {
         expect(name).toBe('Joel')
       })
-  
+
       fetchName(true).catch(e => {
         expect(e).toMatch('error')
       })
@@ -112,7 +114,7 @@ describe('Jest', () => {
 
       try {
         await fetchName(true)
-      } catch(e) {
+      } catch (e) {
         expect(e).toMatch('error')
       }
     })
@@ -120,7 +122,7 @@ describe('Jest', () => {
 
   describe('测试异常', () => {
     test('测试异常', () => {
-      function throwErrorFn() {
+      function throwErrorFn () {
         throw new Error('Error happened')
       }
       expect(throwErrorFn).toThrow()
@@ -135,8 +137,8 @@ describe('Jest', () => {
       const _axiosPrev = axios.get;
 
       (axios.get as any).mockImplementation((url: string) => {
-        if(/^\/user$/.test(url)) {
-          return Promise.resolve({name: 'Joel'})
+        if (/^\/user$/.test(url)) {
+          return Promise.resolve({ name: 'Joel' })
         }
         return Promise.resolve('other')
       })

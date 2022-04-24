@@ -9,7 +9,6 @@ const doThing = (msg: string, interval: number = 10):() => Promise<string> => {
   }
 }
 
-
 describe('queue', () => {
   test('success', cb => {
     const fn = jest.fn()
@@ -20,7 +19,7 @@ describe('queue', () => {
     q.push(doThing('1'))
     q.push(doThing('2'))
     q.push(doThing('3'))
-    q.push(done => {// 同步执行
+    q.push(done => { // 同步执行
       done(null, '4')
     })
 

@@ -2,13 +2,13 @@
  * @jest-environment jsdom
  */
 describe('this', function () {
-  test('做为对象上的方法被调用，方法中的 this 是调用者对象',() => {
+  test('做为对象上的方法被调用，方法中的 this 是调用者对象', () => {
     const obj1 = {
       name: 'Joel',
-      getName: function() {
+      getName: function () {
         return this.name
       },
-      getName2() {
+      getName2 () {
         return this.name
       }
     }
@@ -26,7 +26,7 @@ describe('this', function () {
   test('bind 在函数创建时，改变 this 的指向', () => {
     const obj1 = {
       name: 'Joel',
-      getName: function() {
+      getName: function () {
         return this.name
       }
     }
@@ -43,14 +43,14 @@ describe('this', function () {
   test('apply, call 在函数调用时，改变 this 的指向', () => {
     const obj1 = {
       name: 'Joel',
-      getName: function() {
+      getName: function () {
         return this.name
       }
     }
     const obj2: Record<string, any> = {
       name: 'Jack'
     }
-    
+
     obj2.getName = obj1.getName
     expect(obj2.getName()).toBe('Jack')
     expect(obj2.getName.call(obj1)).toBe('Joel')
@@ -60,7 +60,7 @@ describe('this', function () {
   test('apply, call 不能改变 bind 过的函数的 this 的指向', () => {
     const obj1 = {
       name: 'Joel',
-      getName: function() {
+      getName: function () {
         return this.name
       }
     }
@@ -69,13 +69,14 @@ describe('this', function () {
     }
     obj2.getName = obj1.getName.bind(obj1)
     expect(obj2.getName()).toBe('Joel')
+    // eslint-disable-next-line no-useless-call
     expect(obj2.getName.call(obj2)).toBe('Joel')
   })
 
   test('箭头函数，this 是最近一层非箭头函数的this', () => {
     const obj1 = {
       name: 'Joel',
-      getName: function() {
+      getName: function () {
         const arrowGetName = () => this.name
         return arrowGetName()
       }
@@ -92,5 +93,4 @@ describe('this', function () {
     obj2.getName2 = obj1.getName.bind(obj1)
     expect(obj2.getName()).toBe('Jack')
   })
-
 })

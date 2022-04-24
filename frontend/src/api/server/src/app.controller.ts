@@ -10,12 +10,12 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('/pet')
-  findAll(@Query('name') queryName): Pet[] {
+  findAll(@Query('name') queryName: string): Pet[] {
     return this.appService.findAll(queryName);
   }
 
   @Get('/pet/:id')
-  findOne(@Param('id') id): Pet | null {
+  findOne(@Param('id') id: string): Pet | null {
     return this.appService.findOne(parseInt(id, 10));
   }
 
@@ -35,7 +35,7 @@ export class AppController {
   // 文件上传：https://docs.nestjs.com/techniques/file-upload
   @Post('/pet/upload')
   @UseInterceptors(FileInterceptor('image'))
-  uploadFile(@UploadedFile() file: Express.Multer.File) {
+  uploadFile(@UploadedFile() file: Express.Multer.File): string{
     console.log(file);
     return 'success'
   }

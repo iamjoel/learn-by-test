@@ -1,4 +1,4 @@
-import Queue from "./my-queue";
+import Queue from './my-queue'
 const doThing = (msg: string, interval: number = 10):() => Promise<string> => {
   return () => {
     return new Promise(resolve => {
@@ -33,7 +33,7 @@ describe('my queue', () => {
 
   // test('并发数: concurrency', cb => {
   //   const q = new Queue({
-  //     concurrency: 10 
+  //     concurrency: 10
   //   })
 
   //   for(let i = 0; i < 20; i++) {

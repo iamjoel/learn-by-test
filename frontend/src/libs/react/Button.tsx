@@ -11,18 +11,18 @@ const Btn: FC<IBtnProps> = ({
   children,
   onClick
 }) => {
-    return (
+  return (
       <div
         id={id}
         className="btn"
         style={
-          {color: type === 'primary' ? 'blue' : 'red'}
+          { color: type === 'primary' ? 'blue' : 'red' }
         }
         onClick={onClick || (() => {})}
       >
         {children}
       </div>
-    );
+  )
 }
 
 export default Btn

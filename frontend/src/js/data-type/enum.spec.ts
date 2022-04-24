@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 describe('枚举', () => {
   test('默认值: 从 0 开始递增', () => {
     enum weekDay {

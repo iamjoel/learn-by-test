@@ -62,7 +62,7 @@ describe('Array', () => {
       })
     })
   })
-  
+
   describe('删除元素', () => {
     // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
     describe('shift：删除第一个元素', () => {
@@ -134,15 +134,15 @@ describe('Array', () => {
     describe('sort: 数组排序', () => {
       test('默认排序', () => {
         // 比较元素的 UTF-16 值。
-        const arr = ['d', 1, 4, 7, -1, '1', '11',  'a']
-        arr.sort();
-        expect(arr).toEqual([-1, 1, "1", "11", 4, 7, "a", "d"])
+        const arr = ['d', 1, 4, 7, -1, '1', '11', 'a']
+        arr.sort()
+        expect(arr).toEqual([-1, 1, '1', '11', 4, 7, 'a', 'd'])
       })
 
       test('自定义比较函数排序', () => {
         const arr = [1, 20, '15', '08']
         const compareFn = (a: number | string, b: number | string) => {
-          return parseInt(a as string, 10) - parseInt(b as string, 10) 
+          return parseInt(a as string, 10) - parseInt(b as string, 10)
         }
         arr.sort(compareFn)
         expect(arr).toEqual([1, '08', '15', 20])
@@ -156,7 +156,6 @@ describe('Array', () => {
         expect(arr1).toEqual([3, 2, 1])
       })
     })
-
 
     describe('flat: 扁平化数组', () => {
       test('扁平一层', () => {
@@ -174,6 +173,7 @@ describe('Array', () => {
       })
 
       test('空项会被移除', () => {
+        // eslint-disable-next-line no-sparse-arrays
         expect([1, , , 2].flat()).toEqual([1, 2])
         // 不会移除 null 和 undefined 项目
         expect([1, null, 2].flat()).toEqual([1, null, 2])
@@ -186,8 +186,8 @@ describe('Array', () => {
     describe('isArray: 值是否是数组', () => {
       test('值是否是数组', () => {
         expect(Array.isArray([1, 2, 3])).toBe(true)
-        expect(Array.isArray({foo: 123})).toBe(false)
-        expect(Array.isArray("foobar")).toBe(false)
+        expect(Array.isArray({ foo: 123 })).toBe(false)
+        expect(Array.isArray('foobar')).toBe(false)
         expect(Array.isArray(undefined)).toBe(false)
       })
     })
@@ -214,8 +214,8 @@ describe('Array', () => {
       })
 
       test('不支持查找: 对象，数组类引用元素', () => {
-        expect([{name: 'joel'}].includes({name: 'joel'})).toBe(false)
-        expect([{name: 'joel'}].map(item => item.name).includes('joel')).toBe(true)
+        expect([{ name: 'joel' }].includes({ name: 'joel' })).toBe(false)
+        expect([{ name: 'joel' }].map(item => item.name).includes('joel')).toBe(true)
         expect([[1]].includes([1])).toBe(false)
       })
     })
@@ -231,64 +231,64 @@ describe('Array', () => {
       })
 
       test('不支持查找: 对象，数组类引用元素', () => {
-        expect([{name: 'joel'}].indexOf({name: 'joel'})).toBe(-1)
+        expect([{ name: 'joel' }].indexOf({ name: 'joel' })).toBe(-1)
         expect([[1]].indexOf([1])).toBe(-1)
       })
     })
 
     describe('find: 查找满足条件的第一个元素', () => {
       test('查找满足条件的第一个元素', () => {
-        expect([1, 2, 3].find(item => item === 1)).toBe(1);
-        expect([1, 2, 3].find(() => true)).toBe(1);
+        expect([1, 2, 3].find(item => item === 1)).toBe(1)
+        expect([1, 2, 3].find(() => true)).toBe(1)
       })
 
       test('找不到返回 undefined', () => {
-        expect([1, 2, 3].find(item => item < 0)).toBe(undefined);
+        expect([1, 2, 3].find(item => item < 0)).toBe(undefined)
       })
     })
 
     describe('findIndex: 查找满足条件的第一个元素的下标', () => {
       test('查找满足条件的第一个元素的下标', () => {
-        expect([1, 2, 3].findIndex(item => item === 1)).toBe(0);
-        expect([1, 2, 3].findIndex(() => true)).toBe(0);
+        expect([1, 2, 3].findIndex(item => item === 1)).toBe(0)
+        expect([1, 2, 3].findIndex(() => true)).toBe(0)
       })
 
       test('找不到返回 -1', () => {
-        expect([1, 2, 3].findIndex(item => item < 0)).toBe(-1);
+        expect([1, 2, 3].findIndex(item => item < 0)).toBe(-1)
       })
     })
 
     describe('every: 所有元素都满足条件', () => {
       test('所有元素都满足条件', () => {
-        expect([1, 2, 3].every(item => item > 0)).toBe(true);
-        expect([1, 2, 3].every(item => item === 1)).toBe(false);
+        expect([1, 2, 3].every(item => item > 0)).toBe(true)
+        expect([1, 2, 3].every(item => item === 1)).toBe(false)
       })
     })
 
     describe('some: 某个元素都满足条件', () => {
       test('某个元素都满足条件', () => {
-        expect([1, 2, 3].some(item => item === 1)).toBe(true);
-        expect([1, 2, 3].some(item => item < 0)).toBe(false);
+        expect([1, 2, 3].some(item => item === 1)).toBe(true)
+        expect([1, 2, 3].some(item => item < 0)).toBe(false)
       })
     })
 
     describe('slice: 取子字符串', () => {
       test('取子字符串： [开始索引，结束索引]', () => {
-        expect([1, 2, 3].slice(0, 1)).toEqual([1]);
-        expect([1, 2, 3].slice(0, 2)).toEqual([1, 2]);
+        expect([1, 2, 3].slice(0, 1)).toEqual([1])
+        expect([1, 2, 3].slice(0, 2)).toEqual([1, 2])
       })
 
       test('开始索引默认是0', () => {
-        expect([1, 2, 3].slice(undefined, 1)).toEqual([1]);
+        expect([1, 2, 3].slice(undefined, 1)).toEqual([1])
       })
 
       test('结束索引默认是数组长度', () => {
-        expect([1, 2, 3].slice(0)).toEqual([1, 2, 3]);
-        expect([1, 2, 3].slice()).toEqual([1, 2, 3]);
+        expect([1, 2, 3].slice(0)).toEqual([1, 2, 3])
+        expect([1, 2, 3].slice()).toEqual([1, 2, 3])
       })
 
       test('默认是浅拷贝', () => {
-        const arr1 = [{name: 'Joel'}]
+        const arr1 = [{ name: 'Joel' }]
         const arr2 = arr1.slice()
         arr1[0].name = 'Jack'
         expect(arr2[0].name).toBe('Jack')
@@ -298,7 +298,7 @@ describe('Array', () => {
     describe('join: 数组转换成分隔符连接的字符串', () => {
       test('默认分隔符是","', () => {
         expect([1, 2, 3].join()).toBe('1,2,3')
-      });
+      })
 
       test('不同的分隔符', () => {
         expect([1, 2, 3].join(',')).toBe('1,2,3')
@@ -319,12 +319,12 @@ describe('Array', () => {
       test('将结果返回为单个值', () => {
         const sum = [1, 2, 3].reduce((prev, curr) => prev + curr, 0)
         expect(sum).toBe(6)
-      });
+      })
     })
   })
 
   test('类数组对象转换成数组: Array.from', () => {
-    function getArgs(a: number, b: number) {
+    function getArgs (a: number, b: number) {
       return Array.from(arguments)
     }
 

@@ -1,4 +1,4 @@
-import { remove, removeUgly} from '.'
+import { remove, removeUgly } from '.'
 describe('删除元素', () => {
   test('remove', () => {
     expect(remove([1, 2, 3], 2)).toEqual([1, 3])

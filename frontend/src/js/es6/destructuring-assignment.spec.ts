@@ -1,7 +1,7 @@
 describe('解构赋值', () => {
   test('解构赋值', () => {
-    const obj = {a: 1, b: {name: 'Joel'}, c: 2};
-    const {a, b: {name}, c: d} = obj
+    const obj = { a: 1, b: { name: 'Joel' }, c: 2 }
+    const { a, b: { name }, c: d } = obj
     expect(a).toBe(1)
     expect(name).toBe('Joel')
     expect(d).toBe(2) // 别名
@@ -20,11 +20,12 @@ describe('解构赋值', () => {
   })
 
   test('剩余参数', () => {
-    const obj = {a: 1, b: {name: 'Joel'}, c: 2};
-    const {a, ...restObj} = obj
-    expect(restObj).toEqual({b: {name: 'Joel'}, c: 2})
+    const obj = { a: 1, b: { name: 'Joel' }, c: 2 }
+    const { a, ...restObj } = obj
+    expect(restObj).toEqual({ b: { name: 'Joel' }, c: 2 })
 
     const arr = [1, 2, 3]
+    // eslint-disable-next-line no-unused-vars
     const [b, ...restArr] = arr
     expect(restArr).toEqual([2, 3])
   })

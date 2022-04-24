@@ -1,11 +1,13 @@
-import serverAndBrowser, {Page, StopFn} from '../../utils/e2e-setup'
+import serverAndBrowser, { Page, StopFn } from '../../utils/e2e-setup'
+import path from 'path'
+
 describe('DOM', () => {
   let stop: StopFn
   let page: Page
 
   beforeAll(async () => {
     const res = await serverAndBrowser({
-      rootPath: `${__dirname}/code`,
+      rootPath: path.join(__dirname, 'code'),
       port: 3003
     })
     stop = res.stop
@@ -37,7 +39,7 @@ describe('DOM', () => {
         scrollWidth: dom.scrollWidth,
         scrollHeight: dom.scrollHeight,
         windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight,
+        windowHeight: window.innerHeight
       }
     })
 
@@ -58,7 +60,7 @@ describe('DOM', () => {
       width,
       height
     } = await page.evaluate(() => {
-      const {left, right, top, bottom, width, height} = document.querySelector('#tar-pos').getBoundingClientRect()
+      const { left, right, top, bottom, width, height } = document.querySelector('#tar-pos').getBoundingClientRect()
       return {
         left,
         right,
@@ -86,7 +88,7 @@ describe('DOM', () => {
       return {
         styleBackground: dom.style.background,
         styleWidth: dom.style.width,
-        computedFontSize: getComputedStyle(dom).fontSize
+        computedFontSize: window.getComputedStyle(dom).fontSize
       }
     })
 
@@ -101,7 +103,9 @@ describe('DOM', () => {
     } = await page.evaluate(() => {
       const dom: HTMLElement = document.querySelector('#tar-click')
       const outputDom = document.querySelector('#output')
-      const clickHandler = () => outputDom.textContent = 'clicked'
+      const clickHandler = () => {
+        outputDom.textContent = 'clicked'
+      }
       dom.addEventListener('click', clickHandler)
       dom.click()
       dom.removeEventListener('click', clickHandler)

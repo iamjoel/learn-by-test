@@ -12,4 +12,4 @@ describe('求和', () => {
     expect(sumSimple([1, '2' as unknown as number, 3])).toBe(6)
     expect(sumSimple([1, 'a' as unknown as number, 3])).toBe(4)
   })
-});
+})

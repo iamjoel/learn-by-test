@@ -1,5 +1,5 @@
 export const a = 'a'
-export function hello() {
+export function hello () {
   return 'hello'
 }
 

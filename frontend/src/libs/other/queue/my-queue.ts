@@ -2,12 +2,12 @@ import EventEmitter from 'events'
 
 interface IOptions {
   concurrency?: number
-} 
+}
 
 type JobFn = () => Promise<any>
 
-class Queue extends EventEmitter{
-  constructor(options: IOptions={}) {
+class Queue extends EventEmitter {
+  constructor (options: IOptions = {}) {
     super()
     this.options = {
       concurrency: Number.POSITIVE_INFINITY,
@@ -25,12 +25,12 @@ class Queue extends EventEmitter{
   _isEnd: boolean
   _result: any[]
 
-  push(fn: JobFn) {
-    this._jobs.push(fn);
+  push (fn: JobFn) {
+    this._jobs.push(fn)
   }
 
-  start() {
-    if(this._jobs.length === 0) {
+  start () {
+    if (this._jobs.length === 0) {
       return
     }
 
@@ -38,8 +38,8 @@ class Queue extends EventEmitter{
     jobsFn.forEach(fn => this.runJob(fn))
   }
 
-  runJob(fn: JobFn) {
-    if(this._runningNum >= this.options.concurrency || this._isEnd) {
+  runJob (fn: JobFn) {
+    if (this._runningNum >= this.options.concurrency || this._isEnd) {
       return
     }
     this._runningNum++
@@ -50,16 +50,16 @@ class Queue extends EventEmitter{
       this.emit('error', e)
     }).finally(() => {
       this._runningNum--
-      if(this._isEnd) {
+      if (this._isEnd) {
         return
       }
-      if(this._jobs.length === 0 && this._runningNum === 0) {
+      if (this._jobs.length === 0 && this._runningNum === 0) {
         this.emit('end', this._result)
         this._isEnd = true
         return
       }
-      
-      if(this._jobs.length > 0) {
+
+      if (this._jobs.length > 0) {
         this.runJob(this._jobs.shift())
       }
     })

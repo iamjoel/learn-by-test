@@ -3,7 +3,7 @@ export const unique = <T extends BaseType>(arr: T[]):T[] => {
   const cache: Record<BaseType, boolean> = {}
   const res: T[] = []
   arr.forEach(item => {
-    if(!cache[item]) {
+    if (!cache[item]) {
       res.push(item)
       cache[item] = true
     }
@@ -17,12 +17,12 @@ export const uniqueObj = <T extends BaseType, K>(arr: K[], mapToUniqValueArr: (i
   arr
     .map(item => mapToUniqValueArr(item))
     .forEach((key, index) => {
-      if(!cache[key]) {
+      if (!cache[key]) {
         cache[key] = true
         uniqIndex.push(index)
       }
     })
-  
+
   const res: K[] = uniqIndex.map(index => arr[index])
   return res
 }
@@ -35,7 +35,7 @@ export const uniqUseSet = <T extends BaseType>(arr: T[]):T[] => {
 export const uniqUgly = <T extends BaseType>(arr: T[]):T[] => {
   const res: T[] = []
   arr.forEach(item => {
-    if(!res.includes(item)) {
+    if (!res.includes(item)) {
       res.push(item)
     }
   })

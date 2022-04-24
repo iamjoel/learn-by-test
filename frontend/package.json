@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/**/*.js src/**/*.ts",
-    "fix": "eslint --fix src/**/*.js src/**/*.ts",
+    "lint": "eslint --ext .js,.ts,.tsx src/**",
+    "lint-one": "eslint --ext .js,.ts,.tsx src/**",
+    "fix": "eslint --fix --ext .js,.ts,.tsx src/**",
     "test": "cross-env TYPE=all jest",
     "test:unit": "cross-env TYPE=unit jest",
     "test:e2e": "cross-env TYPE=e2e jest",
