@@ -1,5 +1,5 @@
 # 通过写测试用例来学习
-[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
 [![learn by test](https://circleci.com/gh/iamjoel/learn-by-test.svg?style=svg)](https://circleci.com/gh/iamjoel/learn-by-test)
 
 通过写测试用例来学习是一种**高效的学习方法**。
@@ -63,32 +63,15 @@ expect(posYArr[1]).toBe(posYArr[2])
 
 #### [设计模式](frontend/src/design-pattern/README.md)
 ##### 创建型模式
-1. [抽象工厂模式](frontend/src/design-pattern/creational/abstract-factory/index.spec.js)
-2. [工厂模式](frontend/src/design-pattern/creational/factory-method/index.spec.js)
-3. [建造者模式](frontend/src/design-pattern/creational/builder/index.spec.js)
-4. [原型模式](frontend/src/design-pattern/creational/prototype/index.spec.js)
-5. [单例模式](frontend/src/design-pattern/creational/singleton/index.spec.js)
+[抽象工厂模式](frontend/src/design-pattern/creational/abstract-factory/index.spec.js)，[工厂模式](frontend/src/design-pattern/creational/factory-method/index.spec.js)，[建造者模式](frontend/src/design-pattern/creational/builder/index.spec.js)，[原型模式](frontend/src/design-pattern/creational/prototype/index.spec.js)，[单例模式](frontend/src/design-pattern/creational/singleton/index.spec.js)。
+
 ##### 结构型模式
-1. [适配器模式](frontend/src/design-pattern/structural/adapt/index.spec.js)
-2. [桥接模式](frontend/src/design-pattern/structural/bridge/index.spec.js)
-3. [组合模式](frontend/src/design-pattern/structural/composite/index.spec.js)
-4. [装饰器模式](frontend/src/design-pattern/structural/decorate/index.spec.js)
-5.  [外观模式](frontend/src/design-pattern/structural/facade/index.spec.js)
-6.  [享元模式](frontend/src/design-pattern/structural/flyweight/index.spec.js)
-7.  [代理模式](frontend/src/design-pattern/structural/proxy/index.spec.js)
+[适配器模式](frontend/src/design-pattern/structural/adapt/index.spec.js)，[桥接模式](frontend/src/design-pattern/structural/bridge/index.spec.js)，[组合模式](frontend/src/design-pattern/structural/composite/index.spec.js)，[装饰器模式](frontend/src/design-pattern/structural/decorate/index.spec.js)，[外观模式](frontend/src/design-pattern/structural/facade/index.spec.js)，[享元模式](frontend/src/design-pattern/structural/flyweight/index.spec.js)，[代理模式](frontend/src/design-pattern/structural/proxy/index.spec.js)。
 
 ##### 行为型模式
-1.  [责任链模式](frontend/src/design-pattern/behavioral/chain-of-resp/index.spec.js)
-2.  [命令模式](frontend/src/design-pattern/behavioral/command/index.spec.js)
-3.  [解释器模式](frontend/src/design-pattern/behavioral/interpreter/index.spec.js)
-4.  [迭代器模式](frontend/src/design-pattern/behavioral/iterator/index.spec.js)
-5.  [中介者模式](frontend/src/design-pattern/behavioral/mediator/index.spec.js)
-6.  [备忘录模式](frontend/src/design-pattern/behavioral/memento/index.spec.js)
-7.  [观察者模式](frontend/src/design-pattern/behavioral/observer/index.spec.js)
-8.  [状态模式](frontend/src/design-pattern/behavioral/state/index.spec.js)
-9.  [策略模式](frontend/src/design-pattern/behavioral/strategy/index.spec.js)
-10. [模板模式](frontend/src/design-pattern/behavioral/template/index.spec.js)
-11. [访问者模式](frontend/src/design-pattern/behavioral/visitor/index.spec.js)
+[责任链模式](frontend/src/design-pattern/behavioral/chain-of-resp/index.spec.js)，[命令模式](frontend/src/design-pattern/behavioral/command/index.spec.js)，[解释器模式](frontend/src/design-pattern/behavioral/interpreter/index.spec.js)，[迭代器模式](frontend/src/design-pattern/behavioral/iterator/index.spec.js)，[中介者模式](frontend/src/design-pattern/behavioral/mediator/index.spec.js)，[备忘录模式](frontend/src/design-pattern/behavioral/memento/index.spec.js)，[观察者模式](frontend/src/design-pattern/behavioral/observer/index.spec.js)，[状态模式](frontend/src/design-pattern/behavioral/state/index.spec.js)，[策略模式](frontend/src/design-pattern/behavioral/strategy/index.spec.js)
+，[模板模式](frontend/src/design-pattern/behavioral/template/index.spec.js)
+，[访问者模式](frontend/src/design-pattern/behavioral/visitor/index.spec.js)。
 
 #### TypeScript
 * [常用写法](frontend/src/ts/common.spec.ts)
