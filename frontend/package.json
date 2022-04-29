@@ -43,11 +43,13 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.176",
+    "@types/mockjs": "^1.0.6",
     "@types/puppeteer": "^5.4.4",
     "axios": "^0.24.0",
     "form-data": "^4.0.0",
     "lodash": "^4.17.21",
     "micromatch": "^4.0.5",
+    "mockjs": "^1.1.0",
     "moment": "^2.29.1",
     "puppeteer": "^10.4.0",
     "query-string": "^7.0.1",
