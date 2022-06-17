@@ -117,6 +117,18 @@ describe('Array', () => {
       })
     })
 
+    describe('flatMap: 数组映射，然后去除一层数组', () => {
+      test('数组映射，然后去除一层数组', () => {
+        const arr = [1, 2, 3]
+        // 结果数组内增，减内容
+        expect(arr.flatMap(item => [item, item * 2])).toEqual([1, 2, 2, 4, 3, 6])
+        expect(arr.flatMap(() => [])).toEqual([]);
+
+        const strArr = ["it's Sunny in", "", "California"]
+        expect(strArr.flatMap(s => s.split(' '))).toEqual(["it's","Sunny","in", "", "California"])
+      })
+    })
+
     describe('filter: 过滤数组内容', () => {
       test('过滤数组内容', () => {
         const arr = [1, 2, 3, 4, 5, 6]
