@@ -31,6 +31,11 @@ const router = createRouter({
       ]
     },
     {
+      path: '/admin-list',
+      name: 'admin-list',
+      component: () => import('../views/AdminList.vue')
+    },
+    {
       path: '/template',
       name: 'template',
       component: () => import('../views/Template.vue')
