@@ -82,7 +82,9 @@ expect(posYArr[1]).toBe(posYArr[2])
 * [Flex 布局](frontend/src/css/flex/index.e2e.spec.ts)
 
 #### 第三方库
-* [React](frontend/src/libs/react/Button.spec.tsx)
+* React
+  * [组件](frontend/src/libs/react/component/Button.spec.tsx)
+  * [HOC](frontend/src/libs/react/hoc/Hoc.spec.tsx)
 * Vue3
   * 模板语法：[循环](frontend/src/libs/vue/vue3/src/components/template/Repeat.spec.js)
   * 组合式 API
