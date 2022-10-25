@@ -17,6 +17,9 @@ describe('fs', () => {
     fs.writeFileSync(filePath, 'def')
     content = fs.readFileSync(filePath).toString()
     expect(content).toBe('def')
+    // 用 fs-extra 方便的 1. 确保文件存在。 2. 方便的写流
+    // import fs from 'fs-extra'
+    // await fs.outputFile(`output/${fileName}.xls`, buffer|content)
   })
 
   test('写文件: 追加内容', () => {
