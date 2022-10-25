@@ -62,6 +62,7 @@ expect(posYArr[1]).toBe(posYArr[2])
 * 最佳实践：[去重](frontend/src/js/best-practice/unique/index.spec.ts)，[最大值](frontend/src/js/best-practice/max/index.spec.ts)，[求和](frontend/src/js/best-practice/sum/index.spec.ts)，[删除元素](frontend/src/js/best-practice/remove/index.spec.ts)
 * 工具函数
   * [文件大小转化](frontend/src/js/utils/format-file-size.spec.ts)
+  * [遍历文件夹下的所有文件/文件夹](node/src/utils/walk-through.spec.ts)
 
 #### [设计模式](frontend/src/design-pattern/README.md)
 ##### 创建型模式
