@@ -2,7 +2,7 @@ import update from 'immutability-helper'
 // https://github.com/kolodny/immutability-helper
 describe('immutability helper', () => {
     describe('object', () => {
-        test('update obj value', () => {
+        test('replace obj key value', () => {
             const obj = {
                 a: 1,
                 b: {
@@ -29,6 +29,27 @@ describe('immutability helper', () => {
                         d: 3
                     }
                 }
+            })
+        })
+
+        test('update obj key value', () => {
+            const obj = {
+                a: 1,
+                b: 2,
+                c: 3
+            }
+
+            const obj2 = update(obj, {
+                $merge: {
+                    b: 6,
+                    c: 8
+                }
+            })
+
+            expect(obj2).toEqual({
+                a: 1,
+                b: 6,
+                c: 8
             })
         })
 
