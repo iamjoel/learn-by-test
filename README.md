@@ -54,8 +54,8 @@ expect(posYArr[1]).toBe(posYArr[2])
 ## 内容
 ### 前端 
 #### JavaScript
-* 基础: [if](frontend/src/js/basic/if.spec.ts)，[循环](frontend/src/js/basic/loop.spec.ts)。
-* 数据类型: [数字](frontend/src/js/data-type/number.spec.ts)，[字符串](frontend/src/js/data-type/string.spec.ts)，[正则](frontend/src/js/data-type/regexp.spec.ts)，[数组](frontend/src/js/data-type/array.spec.ts)，[对象](frontend/src/js/data-type/object.spec.ts)，[函数](frontend/src/js/data-type/function.spec.ts)，[枚举](frontend/src/js/data-type/enum.spec.ts)，[Set](frontend/src/js/data-type/set.spec.ts)。
+* 基础: [if](frontend/src/js/basic/if.spec)，[循环](frontend/src/js/basic/loop.spec.ts)。
+* 数据类型: [数字](number.spec.ts)，[字符串](frontend/src/js/data-type/string.spec.ts)，[正则](frontend/src/js/data-type/regexp.spec.ts)，[数组](frontend/src/js/data-type/array.spec.ts)，[对象](frontend/src/js/data-type/object.spec.ts)，[函数](frontend/src/js/data-type/function.spec.ts)，[枚举](frontend/src/js/data-type/enum.spec.ts)，[Set](frontend/src/js/data-type/set.spec.ts)。
 * [this](frontend/src/js/this/index.spec.ts) 还有 [这里](frontend/src/js/this/index.e2e.spec.ts)
 * ES6+: [Promise](frontend/src/js/es6/promise.spec.ts)，[async/await](frontend/src/js/es6/async-await.spec.ts)，[解构赋值](frontend/src/js/es6/destructuring-assignment.spec.ts)，[JavaScript Modules](frontend/src/js/es6/module/index.spec.ts)，[可选链操作符(?.)](frontend/src/js/es6/optional-chain.spec.ts)，[空值合并运算符(??) 和 逻辑空赋值(??=)](frontend/src/js/es6/nullish-operator.spec.ts)。
 * [DOM](frontend/src/js/dom/index.e2e.spec.ts)
@@ -93,6 +93,7 @@ expect(posYArr[1]).toBe(posYArr[2])
   * 组合式 API
     * [属性](frontend/src/libs/vue/vue3/src/components/data/Props.spec.js)
 * 基础库工具库: [Lodash](frontend/src/libs/lodash.spec.ts)，[immutability-helper(不可变数据的改动工具库)](frontend/src/libs/immutability-helper.spec.ts)，[moment](frontend/src/libs/moment.spec.ts)，[时间操作封装](frontend/src/libs/time/util.spec.ts)，[query-string](frontend/src/libs/query-string.spec.ts)，[路径匹配库: micromatch](frontend/src/libs/micromatch.spec.ts)，[mockjs](frontend/src/libs/mockjs.spec.ts)。
+* 类名: [tailwind-merge](frontend/src/libs/class-name/tailwind-merge.spec.ts)
 * 测试库: [Jest](frontend/src/libs/jest/index.spec.ts)，[Puppeteer](frontend/src/libs/puppeteer/index.e2e.spec.ts)。
 * 数据管理: [状态机:XState](frontend/src/libs/data-manage/xstate.spec.ts)
 * 其他：[任务队列管理库:queue](frontend/src/libs/other/queue/index.spec.ts)
