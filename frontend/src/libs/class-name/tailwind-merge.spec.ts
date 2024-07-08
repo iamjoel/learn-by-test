@@ -11,6 +11,7 @@ describe('tailwind-merge', () => {
     expect(twMerge('p-0')).toBe('p-0')
     expect(twMerge('text-right text-center text-left')).toBe('text-left')
     expect(twMerge('pl-4 p-8')).toBe('p-8')
+    expect(twMerge('p-8 pl-4')).toBe('p-8 pl-4') // specific not cover common
     expect(twMerge('m-[2px] m-[4px]')).toBe('m-[4px]')
     expect(twMerge('m-1 m-[4px]')).toBe('m-[4px]')
     expect(twMerge('overflow-x-auto hover:overflow-x-hidden overflow-x-scroll')).toBe(
