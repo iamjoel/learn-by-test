@@ -93,7 +93,7 @@ expect(posYArr[1]).toBe(posYArr[2])
   * 组合式 API
     * [属性](frontend/src/libs/vue/vue3/src/components/data/Props.spec.js)
 * 基础库工具库: [Lodash](frontend/src/libs/lodash.spec.ts)，[immutability-helper(不可变数据的改动工具库)](frontend/src/libs/immutability-helper.spec.ts)，[moment](frontend/src/libs/moment.spec.ts)，[时间操作封装](frontend/src/libs/time/util.spec.ts)，[query-string](frontend/src/libs/query-string.spec.ts)，[路径匹配库: micromatch](frontend/src/libs/micromatch.spec.ts)，[mockjs](frontend/src/libs/mockjs.spec.ts)。
-* 类名: [tailwind-merge](frontend/src/libs/class-name/tailwind-merge.spec.ts)，[cva](frontend/src/libs/class-name/cva.spec.ts)。
+* 类名: [tailwind-merge](frontend/src/libs/class-name/tailwind-merge.spec.ts)，[classNames](frontend/src/libs/class-name/classnames.spec.ts) [cva](frontend/src/libs/class-name/cva.spec.ts)。
 * 测试库: [Jest](frontend/src/libs/jest/index.spec.ts)，[Puppeteer](frontend/src/libs/puppeteer/index.e2e.spec.ts)。
 * 数据管理: [状态机:XState](frontend/src/libs/data-manage/xstate.spec.ts)
 * 其他：[任务队列管理库:queue](frontend/src/libs/other/queue/index.spec.ts)
