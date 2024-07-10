@@ -18,6 +18,11 @@ describe('tailwind-merge', () => {
       'hover:overflow-x-hidden overflow-x-scroll'
     )
     expect(twMerge('h-10 h-min')).toBe('h-min')
+    expect(twMerge('h-10 leading-[10px]')).toBe('h-10 leading-[10px]')
+    expect(twMerge('text-[13px] leading-[10px]')).toBe('text-[13px] leading-[10px]')
+    expect(twMerge('leading-[10px] text-[13px]')).toBe('text-[13px]') // text-* include leading style
+    expect(twMerge('text-xs leading-[10px]')).toBe('text-[13px] leading-[10px]')
+    expect(twMerge('h-10 leading-[10px] font-medium')).toBe('h-10 leading-[10px] font-medium')
     expect(twMerge('bg-grey-5 bg-hotpink')).toBe('bg-hotpink')
 
     expect(twMerge('hover:block hover:inline')).toBe('hover:inline')
